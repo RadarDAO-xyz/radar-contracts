@@ -42,17 +42,20 @@ contract RadarEditions is
         address owner;
     }
 
+    event EditionApproved(uint256 editionId);
+    event EditionCreated(uint256 editionId, uint256 fee, address owner);
+    event EditionBalanceWithdrawn(uint256 editionId, uint256 amount, address owner);
+    event EditionStopped(uint256 editionId);
+    event EditionResumed(uint256 editionId);
+
     bytes32 public constant URI_SETTER_ROLE = keccak256("URI_SETTER_ROLE");
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
 
     uint256 public protocolFee;
-    // TODO: change to bitmap for whether editions are launched
     // mapping of edition id to edition status
     mapping(uint256 => Edition) public launchedEditions;
     // counter to keep track of created editions
     uint256 public editionCounter;
-
-    // id in 1155 used to refer to edition id
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor(uint256 _protocolFee) {
@@ -109,6 +112,8 @@ contract RadarEditions is
             revert EditionNotCreated();
         }
         launchedEditions[editionId].status = EditionStatus.Launched;
+
+        emit EditionApproved(editionId);
     }
 
     function withdrawFunds(uint256 amount) external onlyRole(DEFAULT_ADMIN_ROLE) {
@@ -127,6 +132,8 @@ contract RadarEditions is
         editionId = editionCounter;
         launchedEditions[editionId] = Edition({status: EditionStatus.Created, fee: fee, balance: 0, owner: msg.sender});
         editionCounter++;
+
+        emit EditionCreated(editionId, fee, msg.sender);
     }
 
     function withdrawEditionBalance(uint256 editionId, uint256 amount) external {
@@ -141,6 +148,8 @@ contract RadarEditions is
         if (!sent) {
             revert TransactionFailed();
         }
+
+        emit EditionBalanceWithdrawn(editionId, amount, msg.sender);
     }
 
     function stopEdition(uint256 editionId) external {
@@ -152,6 +161,8 @@ contract RadarEditions is
         }
 
         launchedEditions[editionId].status = EditionStatus.Stopped;
+
+        emit EditionStopped(editionId);
     }
 
     function resumeEdition(uint256 editionId) external {
@@ -163,6 +174,8 @@ contract RadarEditions is
         }
 
         launchedEditions[editionId].status = EditionStatus.Launched;
+
+        emit EditionResumed(editionId);
     }
 
     /// user methods
