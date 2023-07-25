@@ -9,6 +9,7 @@ import {ERC1155BurnableUpgradeable} from
 import {ERC1155SupplyUpgradeable} from
     "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol";
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 error EditionNotCreated();
 error EditionNotLaunched();
@@ -25,7 +26,8 @@ contract RadarEditions is
     AccessControlUpgradeable,
     PausableUpgradeable,
     ERC1155BurnableUpgradeable,
-    ERC1155SupplyUpgradeable
+    ERC1155SupplyUpgradeable,
+    UUPSUpgradeable
 {
     enum EditionStatus {
         NotCreated,
@@ -50,6 +52,7 @@ contract RadarEditions is
 
     bytes32 public constant URI_SETTER_ROLE = keccak256("URI_SETTER_ROLE");
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
+    bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     uint256 public protocolFee;
     // mapping of edition id to edition status
@@ -58,10 +61,8 @@ contract RadarEditions is
     uint256 public editionCounter;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor(uint256 _protocolFee) {
+    constructor() {
         _disableInitializers();
-
-        protocolFee = _protocolFee;
     }
 
     receive() external payable {}
@@ -74,6 +75,7 @@ contract RadarEditions is
         __Pausable_init();
         __ERC1155Burnable_init();
         __ERC1155Supply_init();
+        __UUPSUpgradeable_init();
 
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(URI_SETTER_ROLE, msg.sender);
@@ -82,6 +84,10 @@ contract RadarEditions is
 
     function setURI(string memory newuri) public onlyRole(URI_SETTER_ROLE) {
         _setURI(newuri);
+    }
+
+    function setProtocolFee(uint256 _protocolFee) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        protocolFee = _protocolFee;
     }
 
     function pause() public onlyRole(PAUSER_ROLE) {
@@ -103,8 +109,8 @@ contract RadarEditions is
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 
-    function addAdmin(address admin) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        _grantRole(DEFAULT_ADMIN_ROLE, admin);
+    function grantRole(bytes32 role, address account) public virtual override onlyRole(DEFAULT_ADMIN_ROLE) {
+        _grantRole(role, account);
     }
 
     function approveEdition(uint256 editionId) external onlyRole(DEFAULT_ADMIN_ROLE) {
@@ -191,6 +197,8 @@ contract RadarEditions is
         _mint(msg.sender, editionId, amount, bytes(""));
         launchedEditions[editionId].balance += msg.value;
     }
+
+    function _authorizeUpgrade(address newImplementation) internal override onlyRole(UPGRADER_ROLE) {}
 
     // The following functions are overrides required by Solidity.
 
