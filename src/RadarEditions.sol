@@ -154,6 +154,7 @@ contract RadarEditions is
         if (!sent) {
             revert TransactionFailed();
         }
+        launchedEditions[editionId].balance -= amount;
 
         emit EditionBalanceWithdrawn(editionId, amount, msg.sender);
     }
@@ -186,16 +187,17 @@ contract RadarEditions is
 
     /// user methods
 
-    function mintEdition(uint256 editionId, uint256 amount) external payable {
-        if (editions[editionId].status != EditionStatus.Launched) {
+    function mintEdition(uint256 editionId, uint256 amount, bytes memory data) external payable {
+        if (launchedEditions[editionId].status != EditionStatus.Launched) {
             revert EditionNotLaunched();
         }
         if (msg.value < editions[editionId].fee * amount) {
             revert NotEnoughFunds();
         }
 
-        _mint(msg.sender, editionId, amount, bytes(""));
-        editions[editionId].balance += msg.value;
+        _mint(msg.sender, editionId, amount, data);
+
+        launchedEditions[editionId].balance += (msg.value - protocolFee);
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyRole(UPGRADER_ROLE) {}
