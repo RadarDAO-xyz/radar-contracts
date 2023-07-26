@@ -8,3 +8,10 @@
   2. the project mint fee
   3. total balance
 - There is also a globally defined max mint fee (called protocol fee), that all project mint fees cannot exceed
+
+
+## Test scripts
+
+```sh
+PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 forge script script/Deploy.s.sol:Deploy --rpc-url https://optimism.publicnode.com
+```

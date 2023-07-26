@@ -56,7 +56,7 @@ contract RadarEditions is
 
     uint256 public protocolFee;
     // mapping of edition id to edition status
-    mapping(uint256 => Edition) public launchedEditions;
+    mapping(uint256 => Edition) public editions;
     // counter to keep track of created editions
     uint256 public editionCounter;
 
@@ -114,10 +114,10 @@ contract RadarEditions is
     }
 
     function approveEdition(uint256 editionId) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        if (launchedEditions[editionId].status != EditionStatus.Created) {
+        if (editions[editionId].status != EditionStatus.Created) {
             revert EditionNotCreated();
         }
-        launchedEditions[editionId].status = EditionStatus.Launched;
+        editions[editionId].status = EditionStatus.Launched;
 
         emit EditionApproved(editionId);
     }
@@ -136,17 +136,17 @@ contract RadarEditions is
             revert EditionFeeExceedsProtocolFee();
         }
         editionId = editionCounter;
-        launchedEditions[editionId] = Edition({status: EditionStatus.Created, fee: fee, balance: 0, owner: msg.sender});
+        editions[editionId] = Edition({status: EditionStatus.Created, fee: fee, balance: 0, owner: msg.sender});
         editionCounter++;
 
         emit EditionCreated(editionId, fee, msg.sender);
     }
 
     function withdrawEditionBalance(uint256 editionId, uint256 amount) external {
-        if (launchedEditions[editionId].owner != msg.sender) {
+        if (editions[editionId].owner != msg.sender) {
             revert NotEditionOwner();
         }
-        if (amount > launchedEditions[editionId].balance) {
+        if (amount > editions[editionId].balance) {
             revert EditionNotEnoughBalance();
         }
 
@@ -159,27 +159,27 @@ contract RadarEditions is
     }
 
     function stopEdition(uint256 editionId) external {
-        if (launchedEditions[editionId].owner != msg.sender) {
+        if (editions[editionId].owner != msg.sender) {
             revert NotEditionOwner();
         }
-        if (launchedEditions[editionId].status != EditionStatus.Launched) {
+        if (editions[editionId].status != EditionStatus.Launched) {
             revert EditionNotLaunched();
         }
 
-        launchedEditions[editionId].status = EditionStatus.Stopped;
+        editions[editionId].status = EditionStatus.Stopped;
 
         emit EditionStopped(editionId);
     }
 
     function resumeEdition(uint256 editionId) external {
-        if (launchedEditions[editionId].owner != msg.sender) {
+        if (editions[editionId].owner != msg.sender) {
             revert NotEditionOwner();
         }
-        if (launchedEditions[editionId].status != EditionStatus.Stopped) {
+        if (editions[editionId].status != EditionStatus.Stopped) {
             revert EditionNotStopped();
         }
 
-        launchedEditions[editionId].status = EditionStatus.Launched;
+        editions[editionId].status = EditionStatus.Launched;
 
         emit EditionResumed(editionId);
     }
@@ -187,15 +187,15 @@ contract RadarEditions is
     /// user methods
 
     function mintEdition(uint256 editionId, uint256 amount) external payable {
-        if (launchedEditions[editionId].status != EditionStatus.Launched) {
+        if (editions[editionId].status != EditionStatus.Launched) {
             revert EditionNotLaunched();
         }
-        if (msg.value < launchedEditions[editionId].fee * amount) {
+        if (msg.value < editions[editionId].fee * amount) {
             revert NotEnoughFunds();
         }
 
         _mint(msg.sender, editionId, amount, bytes(""));
-        launchedEditions[editionId].balance += msg.value;
+        editions[editionId].balance += msg.value;
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyRole(UPGRADER_ROLE) {}
