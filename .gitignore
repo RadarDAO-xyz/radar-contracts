@@ -12,3 +12,9 @@ docs/
 
 # Dotenv file
 .env
+
+# Hardhat build aritifacts
+artifacts/build-info/
+artifacts/lib/
+
+node_modules
