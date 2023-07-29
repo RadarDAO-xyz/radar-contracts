@@ -106,7 +106,7 @@ contract RadarEditions is
 
     /// edition owner methods
 
-    function createEdition(uint256 fee) external returns (uint256 editionId) {
+    function createEdition(uint256 fee, address owner) external returns (uint256 editionId) {
         if (fee > protocolFee) {
             revert EditionFeeExceedsProtocolFee();
         }
@@ -115,11 +115,11 @@ contract RadarEditions is
             status: EditionsStructs.EditionStatus.Created,
             fee: fee,
             balance: 0,
-            owner: msg.sender
+            owner: owner
         });
         editionCounter++;
 
-        emit EditionCreated(editionId, fee, msg.sender);
+        emit EditionCreated(editionId, fee, owner);
     }
 
     function withdrawEditionBalance(uint256 editionId, uint256 amount) external {
@@ -167,7 +167,7 @@ contract RadarEditions is
 
     /// user methods
 
-    function mintEdition(uint256 editionId, uint256 amount, bytes memory data) external payable {
+    function mintEdition(uint256 editionId, uint256 amount, address buyer, bytes memory data) external payable {
         if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
             revert EditionNotLaunched();
         }
@@ -175,7 +175,7 @@ contract RadarEditions is
             revert NotEnoughFunds();
         }
 
-        _mint(msg.sender, editionId, amount, data);
+        _mint(buyer, editionId, amount, data);
 
         editions[editionId].balance += (msg.value - protocolFee);
     }
