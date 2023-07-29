@@ -24,5 +24,6 @@ contract EditionsStructs {
         uint256 fee;
         uint256 balance;
         address owner;
+        string id;
     }
 }

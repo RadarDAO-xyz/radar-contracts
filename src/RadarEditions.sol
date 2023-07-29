@@ -93,6 +93,14 @@ contract RadarEditions is
         return _editions;
     }
 
+    function getBalances(address owner) external view returns (uint256[] memory) {
+        uint256[] memory balances = new uint256[](editionCounter);
+        for (uint256 i = 0; i < editionCounter; i++) {
+            balances[i] = balanceOf(owner, i);
+        }
+        return balances;
+    }
+
     /// admin methods
 
     function grantRole(bytes32 role, address account) public virtual override onlyRole(DEFAULT_ADMIN_ROLE) {
@@ -117,16 +125,14 @@ contract RadarEditions is
 
     /// edition owner methods
 
-    function createEdition(uint256 fee, address owner, address admin) external returns (uint256 editionId) {
+    function createEdition(uint256 fee, address owner, address payer, string memory id) external returns (uint256 editionId) {
         if (fee > protocolFee) {
             revert EditionFeeExceedsProtocolFee();
         }
         editionId = editionCounter;
         editions[editionId] =
-            EditionsStructs.Edition({status: EditionsStructs.EditionStatus.Created, fee: fee, balance: 0, owner: owner});
+            EditionsStructs.Edition({status: EditionsStructs.EditionStatus.Created, fee: fee, balance: 0, owner: owner, id: id});
         editionCounter++;
-
-        grantRole(DEFAULT_ADMIN_ROLE, admin);
 
         emit EditionCreated(editionId, fee, owner);
     }

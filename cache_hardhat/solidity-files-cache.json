@@ -48,8 +48,8 @@
       ]
     },
     "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\RadarEditions.sol": {
-      "lastModificationDate": 1690652273170,
-      "contentHash": "78f9bca421811625f6d2359be35a6be7",
+      "lastModificationDate": 1690664454130,
+      "contentHash": "44fa2b5e735bd955b0837add75c9ca30",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -104,8 +104,8 @@
       ]
     },
     "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\EditionsStructs.sol": {
-      "lastModificationDate": 1690489398755,
-      "contentHash": "e12437fb343af8fd2ae48c9f95917795",
+      "lastModificationDate": 1690659383622,
+      "contentHash": "cf06f880299d943548a918e9e0aad3ef",
       "sourceName": "src/EditionsStructs.sol",
       "solcConfig": {
         "version": "0.8.19",
