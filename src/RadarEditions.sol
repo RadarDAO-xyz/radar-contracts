@@ -55,6 +55,7 @@ contract RadarEditions is
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(EditionsRoles.URI_SETTER_ROLE, msg.sender);
         _grantRole(EditionsRoles.PAUSER_ROLE, msg.sender);
+        _grantRole(EditionsRoles.UPGRADER_ROLE, msg.sender);
     }
 
     function setURI(string memory newuri) public onlyRole(EditionsRoles.URI_SETTER_ROLE) {
@@ -84,6 +85,16 @@ contract RadarEditions is
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 
+    function getEditions() external view returns (EditionsStructs.Edition[] memory) {
+        EditionsStructs.Edition[] memory _editions = new EditionsStructs.Edition[](editionCounter);
+        for (uint256 i = 0; i < editionCounter; i++) {
+            _editions[i] = editions[i];
+        }
+        return _editions;
+    }
+
+    /// admin methods
+
     function grantRole(bytes32 role, address account) public virtual override onlyRole(DEFAULT_ADMIN_ROLE) {
         _grantRole(role, account);
     }
@@ -106,18 +117,16 @@ contract RadarEditions is
 
     /// edition owner methods
 
-    function createEdition(uint256 fee, address owner) external returns (uint256 editionId) {
+    function createEdition(uint256 fee, address owner, address admin) external returns (uint256 editionId) {
         if (fee > protocolFee) {
             revert EditionFeeExceedsProtocolFee();
         }
         editionId = editionCounter;
-        editions[editionId] = EditionsStructs.Edition({
-            status: EditionsStructs.EditionStatus.Created,
-            fee: fee,
-            balance: 0,
-            owner: owner
-        });
+        editions[editionId] =
+            EditionsStructs.Edition({status: EditionsStructs.EditionStatus.Created, fee: fee, balance: 0, owner: owner});
         editionCounter++;
+
+        grantRole(DEFAULT_ADMIN_ROLE, admin);
 
         emit EditionCreated(editionId, fee, owner);
     }

@@ -48,8 +48,8 @@
       ]
     },
     "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\RadarEditions.sol": {
-      "lastModificationDate": 1690619371179,
-      "contentHash": "6fc1063a807d07ca2cf995cb3bf179c1",
+      "lastModificationDate": 1690652273170,
+      "contentHash": "78f9bca421811625f6d2359be35a6be7",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
