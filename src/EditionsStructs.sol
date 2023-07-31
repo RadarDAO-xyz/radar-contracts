@@ -26,4 +26,9 @@ contract EditionsStructs {
         address owner;
         string id;
     }
+
+    struct EditionIdWithAmount {
+        string id;
+        uint256 amount;
+    }
 }
