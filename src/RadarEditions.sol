@@ -31,12 +31,13 @@ contract RadarEditions is
     event EditionStopped(uint256 editionId);
     event EditionResumed(uint256 editionId);
 
-    uint256 public maximumEditionFee;
     uint256 public protocolFee;
     // mapping of edition id to edition status
     mapping(uint256 => EditionsStructs.Edition) public editions;
     // counter to keep track of created editions
     uint256 public editionCounter;
+
+    uint256 public maximumEditionFee;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -249,13 +250,13 @@ contract RadarEditions is
         ) {
             revert EditionNotLaunched();
         }
-        if (msg.value < editions[editionId].fee * amount) {
+        if (msg.value < (editions[editionId].fee + protocolFee) * amount) {
             revert NotEnoughFunds();
         }
 
         _mint(buyer, editionId, amount, data);
 
-        editions[editionId].balance += (msg.value - protocolFee);
+        editions[editionId].balance += msg.value - amount * protocolFee;
     }
 
     function _authorizeUpgrade(
