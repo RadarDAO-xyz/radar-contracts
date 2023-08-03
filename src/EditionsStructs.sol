@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 error EditionNotCreated();
 error EditionNotLaunched();
 error EditionNotStopped();
-error EditionFeeExceedsProtocolFee();
+error EditionFeeExceedsMaximumFee();
 error EditionNotEnoughBalance();
 error NotEditionOwner();
 error NotEnoughFunds();
