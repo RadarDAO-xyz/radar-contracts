@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\EditionsRoles.sol": {
-      "lastModificationDate": 1690489440613,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsRoles.sol": {
+      "lastModificationDate": 1691018731361,
       "contentHash": "d4ae132dfd9f73b12feccb232c64c07b",
       "sourceName": "src/EditionsRoles.sol",
       "solcConfig": {
@@ -35,7 +35,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -47,9 +55,9 @@
         "EditionsRoles"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\RadarEditions.sol": {
-      "lastModificationDate": 1690665501116,
-      "contentHash": "9ab0d0a1aad96d088359e76660cc9e23",
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
+      "lastModificationDate": 1691099876540,
+      "contentHash": "4d883ff0db7a1719516b938e8b2eb9b9",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -81,7 +89,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -103,9 +119,9 @@
         "RadarEditions"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\EditionsStructs.sol": {
-      "lastModificationDate": 1690665528744,
-      "contentHash": "33611e3ad0617ca9155fa4d71e20a0b5",
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsStructs.sol": {
+      "lastModificationDate": 1691099843009,
+      "contentHash": "0b7c1273837219d0f98b8af30f1c9b3a",
       "sourceName": "src/EditionsStructs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -137,7 +153,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -149,60 +173,8 @@
         "EditionsStructs"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\AccessControlUpgradeable.sol": {
-      "lastModificationDate": 1689718508155,
-      "contentHash": "c88845618a815ef601f3f552c99d7ebb",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [
-        "./IAccessControlUpgradeable.sol",
-        "../utils/ContextUpgradeable.sol",
-        "../utils/StringsUpgradeable.sol",
-        "../utils/introspection/ERC165Upgradeable.sol",
-        "../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControlUpgradeable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\security\\PausableUpgradeable.sol": {
-      "lastModificationDate": 1689718508231,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/security/PausableUpgradeable.sol": {
+      "lastModificationDate": 1691019102258,
       "contentHash": "cbe53d6b803c1102081e00b3a0418ea3",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/security/PausableUpgradeable.sol",
       "solcConfig": {
@@ -235,7 +207,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -250,10 +230,10 @@
         "PausableUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol": {
-      "lastModificationDate": 1689718508232,
-      "contentHash": "5187bf78bbb054d9d4f5121232d5398b",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol",
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol": {
+      "lastModificationDate": 1691019102220,
+      "contentHash": "c88845618a815ef601f3f552c99d7ebb",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol",
       "solcConfig": {
         "version": "0.8.19",
         "settings": {
@@ -284,28 +264,34 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
       "imports": [
-        "./IERC1155Upgradeable.sol",
-        "./IERC1155ReceiverUpgradeable.sol",
-        "./extensions/IERC1155MetadataURIUpgradeable.sol",
-        "../../utils/AddressUpgradeable.sol",
-        "../../utils/ContextUpgradeable.sol",
-        "../../utils/introspection/ERC165Upgradeable.sol",
-        "../../proxy/utils/Initializable.sol"
+        "./IAccessControlUpgradeable.sol",
+        "../utils/ContextUpgradeable.sol",
+        "../utils/StringsUpgradeable.sol",
+        "../utils/introspection/ERC165Upgradeable.sol",
+        "../proxy/utils/Initializable.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "ERC1155Upgradeable"
+        "AccessControlUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol": {
-      "lastModificationDate": 1689718508230,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1691019102257,
       "contentHash": "b0970a564d121abf9adfff8d1a01eb16",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
       "solcConfig": {
@@ -338,7 +324,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -352,8 +346,70 @@
         "Initializable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\UUPSUpgradeable.sol": {
-      "lastModificationDate": 1689718508230,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol": {
+      "lastModificationDate": 1691019102259,
+      "contentHash": "5187bf78bbb054d9d4f5121232d5398b",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [
+        "./IERC1155Upgradeable.sol",
+        "./IERC1155ReceiverUpgradeable.sol",
+        "./extensions/IERC1155MetadataURIUpgradeable.sol",
+        "../../utils/AddressUpgradeable.sol",
+        "../../utils/ContextUpgradeable.sol",
+        "../../utils/introspection/ERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Upgradeable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol": {
+      "lastModificationDate": 1691019102257,
       "contentHash": "52ef5d6c909d6f8ef3077445d3328eca",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
       "solcConfig": {
@@ -386,7 +442,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -402,57 +466,8 @@
         "UUPSUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155BurnableUpgradeable.sol": {
-      "lastModificationDate": 1689718508234,
-      "contentHash": "fff2ea78a61d6bb81a90a28e62309608",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [
-        "../ERC1155Upgradeable.sol",
-        "../../../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155BurnableUpgradeable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155SupplyUpgradeable.sol": {
-      "lastModificationDate": 1689718508234,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol": {
+      "lastModificationDate": 1691019102260,
       "contentHash": "fbf5fdb7a74554410a3b4059f3d314df",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol",
       "solcConfig": {
@@ -485,7 +500,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -500,8 +523,65 @@
         "ERC1155SupplyUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol": {
-      "lastModificationDate": 1689718508257,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol": {
+      "lastModificationDate": 1691019102259,
+      "contentHash": "fff2ea78a61d6bb81a90a28e62309608",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [
+        "../ERC1155Upgradeable.sol",
+        "../../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155BurnableUpgradeable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1691019102272,
       "contentHash": "6200b84950eb05b4a92a39fd1d6e0f9b",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
       "solcConfig": {
@@ -534,7 +614,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -548,152 +636,8 @@
         "ContextUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\IAccessControlUpgradeable.sol": {
-      "lastModificationDate": 1689718508156,
-      "contentHash": "21b43d1337ebc77c11da3cbe3fd65316",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControlUpgradeable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\StringsUpgradeable.sol": {
-      "lastModificationDate": 1689718508259,
-      "contentHash": "c221361be1c4953f5b71f47475b90266",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [
-        "./math/MathUpgradeable.sol",
-        "./math/SignedMathUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StringsUpgradeable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol": {
-      "lastModificationDate": 1689718508264,
-      "contentHash": "5f2d8b81c0ff5bd2047b4846c20b998d",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [
-        "./IERC165Upgradeable.sol",
-        "../../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC165Upgradeable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol": {
-      "lastModificationDate": 1689718508255,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+      "lastModificationDate": 1691019102271,
       "contentHash": "c30c805386fda8a42ff515da963d3a95",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
       "solcConfig": {
@@ -726,7 +670,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -738,8 +690,176 @@
         "AddressUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\math\\SignedMathUpgradeable.sol": {
-      "lastModificationDate": 1689718508267,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol": {
+      "lastModificationDate": 1691019102273,
+      "contentHash": "c221361be1c4953f5b71f47475b90266",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [
+        "./math/MathUpgradeable.sol",
+        "./math/SignedMathUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "StringsUpgradeable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol": {
+      "lastModificationDate": 1691019102276,
+      "contentHash": "5f2d8b81c0ff5bd2047b4846c20b998d",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [
+        "./IERC165Upgradeable.sol",
+        "../../proxy/utils/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165Upgradeable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol": {
+      "lastModificationDate": 1691019102220,
+      "contentHash": "21b43d1337ebc77c11da3cbe3fd65316",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControlUpgradeable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/math/SignedMathUpgradeable.sol": {
+      "lastModificationDate": 1691019102278,
       "contentHash": "2a6b819b2e241091ada6d645df3e3929",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/SignedMathUpgradeable.sol",
       "solcConfig": {
@@ -772,7 +892,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -784,8 +912,8 @@
         "SignedMathUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\math\\MathUpgradeable.sol": {
-      "lastModificationDate": 1689718508265,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol": {
+      "lastModificationDate": 1691019102277,
       "contentHash": "5a2a749b45b6a8eb035f4bf75addcb27",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol",
       "solcConfig": {
@@ -818,7 +946,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -830,8 +966,8 @@
         "MathUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\IERC165Upgradeable.sol": {
-      "lastModificationDate": 1689718508264,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol": {
+      "lastModificationDate": 1691019102276,
       "contentHash": "d6ecf203a5e72c845be9bbf2f304a289",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
       "solcConfig": {
@@ -864,7 +1000,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -876,8 +1020,8 @@
         "IERC165Upgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\IERC1155Upgradeable.sol": {
-      "lastModificationDate": 1689718508233,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol": {
+      "lastModificationDate": 1691019102259,
       "contentHash": "5712a8d74dc6ae8d66b65cdfac95846b",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol",
       "solcConfig": {
@@ -910,7 +1054,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -924,8 +1076,8 @@
         "IERC1155Upgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\IERC1155ReceiverUpgradeable.sol": {
-      "lastModificationDate": 1689718508233,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol": {
+      "lastModificationDate": 1691019102259,
       "contentHash": "eb51ed084f6f7fd2c7098715c5690285",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
       "solcConfig": {
@@ -958,7 +1110,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -972,8 +1132,8 @@
         "IERC1155ReceiverUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\IERC1155MetadataURIUpgradeable.sol": {
-      "lastModificationDate": 1689718508235,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol": {
+      "lastModificationDate": 1691019102260,
       "contentHash": "8b7e95c747e2dab3b5444b37410a8315",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol",
       "solcConfig": {
@@ -1006,7 +1166,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1020,8 +1188,8 @@
         "IERC1155MetadataURIUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\interfaces\\draft-IERC1822Upgradeable.sol": {
-      "lastModificationDate": 1689718508191,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol": {
+      "lastModificationDate": 1691019102233,
       "contentHash": "a6883cfd85607b16c121a02728369eb3",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
       "solcConfig": {
@@ -1054,7 +1222,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1066,8 +1242,8 @@
         "IERC1822ProxiableUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol": {
-      "lastModificationDate": 1689718508229,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol": {
+      "lastModificationDate": 1691019102256,
       "contentHash": "2587366284baa690cce0accaca1a20f9",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
       "solcConfig": {
@@ -1100,7 +1276,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1119,54 +1303,8 @@
         "ERC1967UpgradeUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\interfaces\\IERC1967Upgradeable.sol": {
-      "lastModificationDate": 1689718508179,
-      "contentHash": "a5421a5e611067b9202e83329fbf6fc7",
-      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1967Upgradeable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\StorageSlotUpgradeable.sol": {
-      "lastModificationDate": 1689718508259,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol": {
+      "lastModificationDate": 1691019102273,
       "contentHash": "02cf959b00ba5c650708472f195f8b29",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
       "solcConfig": {
@@ -1199,7 +1337,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1211,8 +1357,62 @@
         "StorageSlotUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\beacon\\IBeaconUpgradeable.sol": {
-      "lastModificationDate": 1689718508230,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol": {
+      "lastModificationDate": 1691019102230,
+      "contentHash": "a5421a5e611067b9202e83329fbf6fc7",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC1967Upgradeable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol": {
+      "lastModificationDate": 1691019102257,
       "contentHash": "21bffd733b4ca013e125a0ffe2e52254",
       "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
       "solcConfig": {
@@ -1245,7 +1445,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1257,8 +1465,8 @@
         "IBeaconUpgradeable"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\src\\RadarEditionsProxy.sol": {
-      "lastModificationDate": 1690325567651,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditionsProxy.sol": {
+      "lastModificationDate": 1691018731361,
       "contentHash": "d61ce783d8033ec78d2b940abfb28319",
       "sourceName": "src/RadarEditionsProxy.sol",
       "solcConfig": {
@@ -1291,7 +1499,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1306,8 +1522,8 @@
         "RadarEditionsProxy"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\proxy\\Proxy.sol": {
-      "lastModificationDate": 1689716292757,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/proxy/Proxy.sol": {
+      "lastModificationDate": 1691019093908,
       "contentHash": "40b3d81a836d50ff47e03893dcaaf204",
       "sourceName": "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
       "solcConfig": {
@@ -1340,7 +1556,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1352,8 +1576,8 @@
         "Proxy"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\proxy\\ERC1967\\ERC1967Upgrade.sol": {
-      "lastModificationDate": 1689716292756,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol": {
+      "lastModificationDate": 1691019093908,
       "contentHash": "a127706394bead18392601a20d44867a",
       "sourceName": "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
       "solcConfig": {
@@ -1386,7 +1610,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1404,54 +1636,8 @@
         "ERC1967Upgrade"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\interfaces\\draft-IERC1822.sol": {
-      "lastModificationDate": 1689716292722,
-      "contentHash": "2858d98e74e67987ec81b39605230b74",
-      "sourceName": "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1822Proxiable"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\interfaces\\IERC1967.sol": {
-      "lastModificationDate": 1689716292711,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol": {
+      "lastModificationDate": 1691019093883,
       "contentHash": "d0d060231a45da7a1eecbb5cd286fa40",
       "sourceName": "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
       "solcConfig": {
@@ -1484,7 +1670,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1496,54 +1690,8 @@
         "IERC1967"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\utils\\StorageSlot.sol": {
-      "lastModificationDate": 1689716292797,
-      "contentHash": "682f7dd1f2e1147c8390e7575deceb2d",
-      "sourceName": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
-          ]
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StorageSlot"
-      ]
-    },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol": {
-      "lastModificationDate": 1689716292792,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+      "lastModificationDate": 1691019093923,
       "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
       "sourceName": "lib/openzeppelin-contracts/contracts/utils/Address.sol",
       "solcConfig": {
@@ -1576,7 +1724,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },
@@ -1588,8 +1744,116 @@
         "Address"
       ]
     },
-    "C:\\Users\\marcu\\Desktop\\Coding\\radar-contracts\\lib\\openzeppelin-contracts\\contracts\\proxy\\beacon\\IBeacon.sol": {
-      "lastModificationDate": 1689716292757,
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol": {
+      "lastModificationDate": 1691019093925,
+      "contentHash": "682f7dd1f2e1147c8390e7575deceb2d",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "StorageSlot"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol": {
+      "lastModificationDate": 1691019093886,
+      "contentHash": "2858d98e74e67987ec81b39605230b74",
+      "sourceName": "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC1822Proxiable"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol": {
+      "lastModificationDate": 1691019093908,
       "contentHash": "b6bd23bf19e90b771337037706470933",
       "sourceName": "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
       "solcConfig": {
@@ -1622,7 +1886,15 @@
             "forge-std/=lib/forge-std/src/",
             "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
             "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+            "lib/forge-std:ds-test/=lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts:erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts:forge-std/=lib/openzeppelin-contracts/lib/forge-std/src/",
+            "lib/openzeppelin-contracts:openzeppelin/=lib/openzeppelin-contracts/contracts/",
+            "lib/openzeppelin-contracts-upgradeable:ds-test/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/lib/ds-test/src/",
+            "lib/openzeppelin-contracts-upgradeable:erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+            "lib/openzeppelin-contracts-upgradeable:forge-std/=lib/openzeppelin-contracts-upgradeable/lib/forge-std/src/",
+            "lib/openzeppelin-contracts-upgradeable:openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
           ]
         }
       },

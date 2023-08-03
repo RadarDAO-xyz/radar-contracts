@@ -13,7 +13,8 @@
     "deploy:dev": "npx hardhat run --network optimism-goerli script/deploy.js",
     "upgrade:mainnet": "npx hardhat run --network optimism script/upgrade.js",
     "upgrade:dev": "npx hardhat run --network optimism-goerli script/upgrade.js",
-    "verify": "npx hardhat verify --network optimism-goerli"
+    "verify": "npx hardhat verify --network optimism 0xcb25E9dcF86dB259765bA7a986dF142B41414036",
+    "verify:dev": "npx hardhat verify --network optimism-goerli 0x2D22716eeb1F85cF79c5531B405517c07441e84B"
   },
   "author": "",
   "license": "ISC",
