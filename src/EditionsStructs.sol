@@ -10,7 +10,7 @@ error NotEditionOwner();
 error NotEnoughFunds();
 error TransactionFailed();
 
-contract EditionsStructs {
+library EditionsStructs {
     enum EditionStatus {
         NotCreated,
         Created,
