@@ -9,10 +9,14 @@ import {ERC1155SupplyUpgradeable} from "@openzeppelin/contracts-upgradeable/toke
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-import "./EditionsStructs.sol";
-import "./EditionsRoles.sol";
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
+
+import {IRadarEditions} from "./IRadarEditions.sol";
+import {EditionsStructs, EditionNotCreated, EditionNotLaunched, EditionNotStopped, EditionFeeExceedsMaximumFee, EditionNotEnoughBalance, NotEditionOwner, NotEnoughFunds, TransactionFailed} from "./EditionsStructs.sol";
+import {EditionsRoles} from "./EditionsRoles.sol";
 
 contract RadarEditions is
+    IRadarEditions,
     Initializable,
     ERC1155Upgradeable,
     AccessControlUpgradeable,
@@ -21,16 +25,6 @@ contract RadarEditions is
     ERC1155SupplyUpgradeable,
     UUPSUpgradeable
 {
-    event EditionApproved(uint256 editionId);
-    event EditionCreated(uint256 editionId, uint256 fee, address owner);
-    event EditionBalanceWithdrawn(
-        uint256 editionId,
-        uint256 amount,
-        address owner
-    );
-    event EditionStopped(uint256 editionId);
-    event EditionResumed(uint256 editionId);
-
     uint256 public protocolFee;
     // mapping of edition id to edition status
     mapping(uint256 => EditionsStructs.Edition) public editions;
@@ -70,13 +64,13 @@ contract RadarEditions is
 
     function setProtocolFee(
         uint256 _protocolFee
-    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         protocolFee = _protocolFee;
     }
 
     function setMaximumEditionFee(
         uint256 _maximumEditionFee
-    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         maximumEditionFee = _maximumEditionFee;
     }
 
@@ -103,9 +97,16 @@ contract RadarEditions is
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 
+    function uri(uint256 id) public view override returns (string memory) {
+        string memory projectId = editions[id].id;
+
+        return string.concat(super.uri(id), "/", projectId, "/metadata");
+    }
+
     function getEditions()
         external
         view
+        override
         returns (EditionsStructs.Edition[] memory)
     {
         EditionsStructs.Edition[]
@@ -118,7 +119,12 @@ contract RadarEditions is
 
     function getBalances(
         address owner
-    ) external view returns (EditionsStructs.EditionIdWithAmount[] memory) {
+    )
+        external
+        view
+        override
+        returns (EditionsStructs.EditionIdWithAmount[] memory)
+    {
         EditionsStructs.EditionIdWithAmount[]
             memory balances = new EditionsStructs.EditionIdWithAmount[](
                 editionCounter
@@ -143,7 +149,7 @@ contract RadarEditions is
 
     function approveEdition(
         uint256 editionId
-    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         if (
             editions[editionId].status != EditionsStructs.EditionStatus.Created
         ) {
@@ -156,7 +162,7 @@ contract RadarEditions is
 
     function withdrawFunds(
         uint256 amount
-    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         (bool sent, ) = msg.sender.call{value: amount}("");
         if (!sent) {
             revert TransactionFailed();
@@ -170,7 +176,7 @@ contract RadarEditions is
         address owner,
         address payer,
         string memory id
-    ) external returns (uint256 editionId) {
+    ) external override returns (uint256 editionId) {
         if (fee > maximumEditionFee) {
             revert EditionFeeExceedsMaximumFee();
         }
@@ -190,7 +196,7 @@ contract RadarEditions is
     function withdrawEditionBalance(
         uint256 editionId,
         uint256 amount
-    ) external {
+    ) external override {
         if (editions[editionId].owner != msg.sender) {
             revert NotEditionOwner();
         }
@@ -207,7 +213,7 @@ contract RadarEditions is
         emit EditionBalanceWithdrawn(editionId, amount, msg.sender);
     }
 
-    function stopEdition(uint256 editionId) external {
+    function stopEdition(uint256 editionId) external override {
         if (editions[editionId].owner != msg.sender) {
             revert NotEditionOwner();
         }
@@ -222,7 +228,7 @@ contract RadarEditions is
         emit EditionStopped(editionId);
     }
 
-    function resumeEdition(uint256 editionId) external {
+    function resumeEdition(uint256 editionId) external override {
         if (editions[editionId].owner != msg.sender) {
             revert NotEditionOwner();
         }
@@ -244,7 +250,7 @@ contract RadarEditions is
         uint256 amount,
         address buyer,
         bytes memory data
-    ) external payable {
+    ) external payable override {
         if (
             editions[editionId].status != EditionsStructs.EditionStatus.Launched
         ) {
