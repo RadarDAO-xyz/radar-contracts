@@ -33,6 +33,8 @@ contract RadarEditions is
 
     uint256 public maximumEditionFee;
 
+    string public name;
+
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
@@ -74,6 +76,12 @@ contract RadarEditions is
         maximumEditionFee = _maximumEditionFee;
     }
 
+    function setName(
+        string memory _name
+    ) external onlyRole(DEFAULT_ADMIN_ROLE) {
+        name = _name;
+    }
+
     function pause() public onlyRole(EditionsRoles.PAUSER_ROLE) {
         _pause();
     }
@@ -95,12 +103,6 @@ contract RadarEditions is
         whenNotPaused
     {
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
-    }
-
-    function uri(uint256 id) public view override returns (string memory) {
-        string memory projectId = editions[id].id;
-
-        return string.concat(super.uri(id), "/", projectId, "/metadata");
     }
 
     function getEditions()
