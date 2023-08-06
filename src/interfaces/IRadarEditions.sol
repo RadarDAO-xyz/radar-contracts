@@ -1,10 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {EditionsStructs} from "./EditionsStructs.sol";
-import {EditionsRoles} from "./EditionsRoles.sol";
+import {RadarEditionsConstants} from "../storage/RadarEditionsConstants.sol";
 
 interface IRadarEditions {
+    error EditionNotCreated();
+    error EditionNotLaunched();
+    error EditionNotStopped();
+    error EditionFeeExceedsMaximumFee();
+    error EditionNotEnoughBalance();
+    error NotEditionOwner();
+    error NotEnoughFunds();
+    error TransactionFailed();
+
     event EditionApproved(uint256 editionId);
     event EditionCreated(uint256 editionId, uint256 fee, address owner);
     event EditionBalanceWithdrawn(
@@ -15,20 +23,52 @@ interface IRadarEditions {
     event EditionStopped(uint256 editionId);
     event EditionResumed(uint256 editionId);
 
-    function setURI(string memory newuri) external;
+    enum EditionStatus {
+        NotCreated,
+        Created,
+        Launched,
+        Stopped
+    }
+
+    // TODO: optimise struct packing
+    struct Edition {
+        EditionStatus status;
+        uint256 fee;
+        uint256 balance;
+        address owner;
+        // @dev 12byte MongoDB ObjectId
+        uint96 id;
+    }
+
+    struct EditionIdWithAmount {
+        string id;
+        uint256 amount;
+    }
+
+    function isValidUpgradePath(
+        address _newImpl,
+        address _currentImpl
+    ) external returns (bool);
+
+    function registerNewUpgradePath(
+        address _newImpl,
+        address[] calldata _supportedPrevImpls
+    ) external;
+
+    function unregisterUpgradePath(
+        address _newImpl,
+        address _prevImpl
+    ) external;
 
     function setProtocolFee(uint256 _protocolFee) external;
 
     function setMaximumEditionFee(uint256 _maximumEditionFee) external;
 
-    function getEditions()
-        external
-        view
-        returns (EditionsStructs.Edition[] memory);
+    function getEditions() external view returns (Edition[] memory);
 
     function getBalances(
         address owner
-    ) external view returns (EditionsStructs.EditionIdWithAmount[] memory);
+    ) external view returns (EditionIdWithAmount[] memory);
 
     /// admin methods
 
