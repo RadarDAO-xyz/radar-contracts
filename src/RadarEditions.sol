@@ -97,12 +97,6 @@ contract RadarEditions is
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 
-    function uri(uint256 id) public view override returns (string memory) {
-        string memory projectId = editions[id].id;
-
-        return string.concat(super.uri(id), "/", projectId, "/metadata");
-    }
-
     function getEditions()
         external
         view
