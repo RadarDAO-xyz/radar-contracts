@@ -56,6 +56,14 @@ contract RadarEditions is
         _grantRole(EditionsRoles.UPGRADER_ROLE, msg.sender);
     }
 
+    function contractURI() public view returns (string memory) {
+        return "https://radarlaunch.app/api/metadata";
+    }
+
+    function uri(uint256 id) public view override returns (string memory) {
+        return string.concat(super.uri(id), Strings.toString(id));
+    }
+
     function setURI(
         string memory newuri
     ) public onlyRole(EditionsRoles.URI_SETTER_ROLE) {

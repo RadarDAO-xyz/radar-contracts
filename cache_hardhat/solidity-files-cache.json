@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsRoles.sol": {
-      "lastModificationDate": 1691018731361,
+      "lastModificationDate": 1691357866305,
       "contentHash": "d4ae132dfd9f73b12feccb232c64c07b",
       "sourceName": "src/EditionsRoles.sol",
       "solcConfig": {
@@ -30,6 +30,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -56,8 +57,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1691266425764,
-      "contentHash": "02e7103c68e8e2e52caca3b405539568",
+      "lastModificationDate": 1691361842918,
+      "contentHash": "9eaeba805442bfd3d6a8013e817090d1",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -84,6 +85,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -122,7 +124,7 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsStructs.sol": {
-      "lastModificationDate": 1691232162870,
+      "lastModificationDate": 1691357866306,
       "contentHash": "1b1069f1b85e84416908cd3d48a74924",
       "sourceName": "src/EditionsStructs.sol",
       "solcConfig": {
@@ -150,6 +152,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -204,6 +207,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -261,6 +265,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -321,6 +326,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -377,6 +383,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -439,6 +446,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -497,6 +505,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -554,6 +563,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -611,6 +621,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -667,6 +678,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -721,6 +733,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -778,6 +791,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -835,6 +849,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -889,6 +904,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -943,6 +959,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -997,6 +1014,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1051,6 +1069,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1107,6 +1126,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1163,6 +1183,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1219,6 +1240,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1273,6 +1295,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1334,6 +1357,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1388,6 +1412,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1442,6 +1467,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1468,7 +1494,7 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditionsProxy.sol": {
-      "lastModificationDate": 1691018731361,
+      "lastModificationDate": 1691357866308,
       "contentHash": "d61ce783d8033ec78d2b940abfb28319",
       "sourceName": "src/RadarEditionsProxy.sol",
       "solcConfig": {
@@ -1496,6 +1522,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1553,6 +1580,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1607,6 +1635,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1667,6 +1696,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1721,6 +1751,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1775,6 +1806,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1829,6 +1861,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1883,6 +1916,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1909,7 +1943,7 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/IRadarEditions.sol": {
-      "lastModificationDate": 1691232789423,
+      "lastModificationDate": 1691357866306,
       "contentHash": "64010c556c7763932c435e108361f28f",
       "sourceName": "src/IRadarEditions.sol",
       "solcConfig": {
@@ -1937,6 +1971,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -1994,6 +2029,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -2051,6 +2087,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
@@ -2105,6 +2142,7 @@
           "remappings": [
             "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
             "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
             "ds-test/=lib/forge-std/lib/ds-test/src/",
             "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
             "forge-std/=lib/forge-std/src/",
