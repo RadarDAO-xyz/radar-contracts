@@ -57,8 +57,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1691361842918,
-      "contentHash": "9eaeba805442bfd3d6a8013e817090d1",
+      "lastModificationDate": 1691362428346,
+      "contentHash": "acc10430e865f04ee6241fe397e8b2b8",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
