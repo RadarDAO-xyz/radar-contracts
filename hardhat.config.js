@@ -4,7 +4,7 @@ require("@nomicfoundation/hardhat-ethers");
 require("@nomicfoundation/hardhat-verify");
 require("@openzeppelin/hardhat-upgrades");
 
-require('dotenv').config();
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {

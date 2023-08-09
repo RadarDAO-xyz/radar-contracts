@@ -12,8 +12,8 @@ import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/U
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 import {IRadarEditions} from "./IRadarEditions.sol";
-import {EditionsStructs, EditionNotCreated, EditionNotLaunched, EditionNotStopped, EditionFeeExceedsMaximumFee, EditionNotEnoughBalance, NotEditionOwner, NotEnoughFunds, TransactionFailed} from "./EditionsStructs.sol";
 import {EditionsRoles} from "./EditionsRoles.sol";
+import "./EditionsStructs.sol";
 
 contract RadarEditions is
     IRadarEditions,
@@ -165,6 +165,17 @@ contract RadarEditions is
     function withdrawFunds(
         uint256 amount
     ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+        if (amount > address(this).balance) {
+            revert NotEnoughFunds();
+        }
+        uint256 withdrawableAmount = address(this).balance;
+        for (uint256 i = 0; i < editionCounter; i++) {
+            withdrawableAmount -= editions[i].balance;
+            if (withdrawableAmount < amount) {
+                revert NotEnoughFees();
+            }
+        }
+
         (bool sent, ) = msg.sender.call{value: amount}("");
         if (!sent) {
             revert TransactionFailed();

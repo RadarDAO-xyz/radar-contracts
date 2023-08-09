@@ -9,14 +9,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "yarn deploy:mainnet && yarn deploy:dev",
     "deploy:mainnet": "npx hardhat run --network optimism script/deploy.js",
     "deploy:dev": "npx hardhat run --network optimism-goerli script/deploy.js",
     "upgrade:mainnet": "npx hardhat run --network optimism script/upgrade.js",
     "upgrade:dev": "npx hardhat run --network optimism-goerli script/upgradeDev.js",
-    "verify": "yarn verify:mainnet && yarn verify:dev",
     "verify:mainnet": "npx hardhat verify --network optimism 0xdbed288027cCbE7F6746bB62c989E7C09C7c8059",
-    "verify:dev": "npx hardhat verify --network optimism-goerli 0x2D22716eeb1F85cF79c5531B405517c07441e84B"
+    "verify:dev": "npx hardhat verify --network optimism-goerli 0xEd4295091C232A000B6fF2A546b78Fd90Ae8Db4E"
   },
   "author": "",
   "license": "ISC",

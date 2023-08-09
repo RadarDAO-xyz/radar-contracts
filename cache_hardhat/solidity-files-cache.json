@@ -57,8 +57,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1691362428346,
-      "contentHash": "acc10430e865f04ee6241fe397e8b2b8",
+      "lastModificationDate": 1691607039177,
+      "contentHash": "35451c3e2b648e78c079fcbdb75203ca",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -113,8 +113,8 @@
         "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
         "@openzeppelin/contracts/utils/Strings.sol",
         "./IRadarEditions.sol",
-        "./EditionsStructs.sol",
-        "./EditionsRoles.sol"
+        "./EditionsRoles.sol",
+        "./EditionsStructs.sol"
       ],
       "versionPragmas": [
         "^0.8.13"
@@ -124,8 +124,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsStructs.sol": {
-      "lastModificationDate": 1691357866306,
-      "contentHash": "1b1069f1b85e84416908cd3d48a74924",
+      "lastModificationDate": 1691603974366,
+      "contentHash": "b731edb99fcb15e14a3a7e7d10007d92",
       "sourceName": "src/EditionsStructs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -1943,7 +1943,7 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/IRadarEditions.sol": {
-      "lastModificationDate": 1691357866306,
+      "lastModificationDate": 1691603731618,
       "contentHash": "64010c556c7763932c435e108361f28f",
       "sourceName": "src/IRadarEditions.sol",
       "solcConfig": {

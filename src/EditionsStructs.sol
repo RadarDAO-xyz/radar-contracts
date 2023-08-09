@@ -9,6 +9,7 @@ error EditionNotEnoughBalance();
 error NotEditionOwner();
 error NotEnoughFunds();
 error TransactionFailed();
+error NotEnoughFees();
 
 library EditionsStructs {
     enum EditionStatus {
