@@ -227,7 +227,10 @@ contract RadarEditions is
     }
 
     function stopEdition(uint256 editionId) external override {
-        if (editions[editionId].owner != msg.sender) {
+        if (
+            !(editions[editionId].owner == msg.sender ||
+                hasRole(DEFAULT_ADMIN_ROLE, msg.sender))
+        ) {
             revert NotEditionOwner();
         }
         if (
@@ -242,7 +245,10 @@ contract RadarEditions is
     }
 
     function resumeEdition(uint256 editionId) external override {
-        if (editions[editionId].owner != msg.sender) {
+        if (
+            !(editions[editionId].owner == msg.sender ||
+                hasRole(DEFAULT_ADMIN_ROLE, msg.sender))
+        ) {
             revert NotEditionOwner();
         }
         if (
