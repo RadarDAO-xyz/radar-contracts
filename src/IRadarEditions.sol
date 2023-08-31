@@ -14,6 +14,18 @@ interface IRadarEditions {
     );
     event EditionStopped(uint256 editionId);
     event EditionResumed(uint256 editionId);
+    // TODO: fix this lazy way of emitting signature hash in event
+    event EditionBelieved(
+        address indexed believer,
+        uint256 indexed editionId,
+        bytes32 hashOne,
+        bytes32 hashTwo,
+        bytes32 hashThree
+    );
+    event EditionBeliefRemoved(
+        address indexed believer,
+        uint256 indexed editionId
+    );
 
     function setURI(string memory newuri) external;
 

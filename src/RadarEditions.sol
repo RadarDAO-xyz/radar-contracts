@@ -9,6 +9,7 @@ import {ERC1155SupplyUpgradeable} from "@openzeppelin/contracts-upgradeable/toke
 import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
+import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 import {IRadarEditions} from "./IRadarEditions.sol";
@@ -32,6 +33,9 @@ contract RadarEditions is
     uint256 public editionCounter;
 
     uint256 public maximumEditionFee;
+
+    // mapping of users to projects they believe in
+    mapping(address => BitMaps.BitMap) internal _beliefs;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -282,6 +286,36 @@ contract RadarEditions is
         _mint(buyer, editionId, amount, data);
 
         editions[editionId].balance += msg.value - amount * protocolFee;
+    }
+
+    function believeProject(
+        uint256 editionId,
+        bytes32 hashOne,
+        bytes32 hashTwo,
+        bytes32 hashThree
+    ) external {
+        if (
+            editions[editionId].status != EditionsStructs.EditionStatus.Launched
+        ) {
+            revert EditionNotCreated();
+        }
+        BitMaps.set(_beliefs[msg.sender], editionId);
+        emit EditionBelieved(
+            msg.sender,
+            editionId,
+            hashOne,
+            hashTwo,
+            hashThree
+        );
+    }
+
+    function removeBelief(uint256 editionId) external {
+        BitMaps.BitMap storage beliefs = _beliefs[msg.sender];
+        if (!BitMaps.get(beliefs, editionId)) {
+            revert NotCorrectUser();
+        }
+        BitMaps.unset(beliefs, editionId);
+        emit EditionBeliefRemoved(msg.sender, editionId);
     }
 
     function _authorizeUpgrade(
