@@ -242,7 +242,7 @@ contract RadarEditions is
             revert EditionNotCreated();
         }
         BitMaps.set(_beliefs[msg.sender], editionId);
-        emit EditionBelieved(editionId, tags);
+        emit EditionBelieved(editionId, msg.sender, tags);
     }
 
     function removeBelief(uint256 editionId) external {
@@ -251,7 +251,7 @@ contract RadarEditions is
             revert NotCorrectUser();
         }
         BitMaps.unset(beliefs, editionId);
-        emit EditionBeliefRemoved(editionId);
+        emit EditionBeliefRemoved(editionId, msg.sender);
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyRole(EditionsRoles.UPGRADER_ROLE) {}

@@ -10,8 +10,8 @@ interface IRadarEditions {
     event EditionBalanceWithdrawn(uint256 editionId, uint256 amount, address owner);
     event EditionStopped(uint256 editionId);
     event EditionResumed(uint256 editionId);
-    event EditionBelieved(uint256 indexed editionId, string tags);
-    event EditionBeliefRemoved(uint256 indexed editionId);
+    event EditionBelieved(uint256 indexed editionId, address indexed believer, string tags);
+    event EditionBeliefRemoved(uint256 indexed editionId, address indexed believer);
 
     function setURI(string memory newuri) external;
 
