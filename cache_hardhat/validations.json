@@ -3,6 +3,1992 @@
   "log": [
     {
       "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol:AccessControlUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\AccessControlUpgradeable.sol:51",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol:IAccessControlUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol:StringsUpgradeable"
+        ],
+        "methods": [
+          "supportsInterface(bytes4)",
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC165Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:40"
+            },
+            {
+              "label": "_roles",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)34_storage)",
+              "contract": "AccessControlUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\AccessControlUpgradeable.sol:66"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "AccessControlUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\AccessControlUpgradeable.sol:264"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(RoleData)34_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(RoleData)34_storage": {
+              "label": "struct AccessControlUpgradeable.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol:IAccessControlUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\IAccessControlUpgradeable.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "hasRole(bytes32,address)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol:IERC1967Upgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\interfaces\\IERC1967Upgradeable.sol:11",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol:IERC1822ProxiableUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\interfaces\\draft-IERC1822Upgradeable.sol:10",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "proxiableUUID()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:ERC1967UpgradeUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:19",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol:IERC1967Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol:StorageSlotUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol:AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol:181"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol:181"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol:181"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC1967UpgradeUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:168"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol:IBeaconUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\beacon\\IBeaconUpgradeable.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "implementation()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:58",
+        "inherit": [],
+        "libraries": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol:AddressUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol:UUPSUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\UUPSUpgradeable.sol:22",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:ERC1967UpgradeUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol:IERC1967Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol:IERC1822ProxiableUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "proxiableUUID()",
+          "upgradeTo(address)",
+          "upgradeToAndCall(address,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC1967UpgradeUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "UUPSUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\UUPSUpgradeable.sol:110"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/security/PausableUpgradeable.sol:PausableUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\security\\PausableUpgradeable.sol:18",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "paused()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_bool",
+              "contract": "PausableUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\security\\PausableUpgradeable.sol:29"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\security\\PausableUpgradeable.sol:116"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol:ERC1155Upgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:21",
+        "version": {
+          "withMetadata": "d6552c84b8d5471c0e38024e7053cf6c51b0e2752e86db5e30fcb7d8925ad278",
+          "withoutMetadata": "52f5fba6fb0bed0f97581f696b77a6aa7a382a7ec20adf954f89c5bd390b00e5",
+          "linkedWithoutMetadata": "52f5fba6fb0bed0f97581f696b77a6aa7a382a7ec20adf954f89c5bd390b00e5"
+        },
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol:IERC1155MetadataURIUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol:IERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol:AddressUpgradeable"
+        ],
+        "methods": [
+          "supportsInterface(bytes4)",
+          "uri(uint256)",
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC165Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:40"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:31"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:34"
+            },
+            {
+              "label": "_uri",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_string_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:37"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_array(t_uint256)47_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:516"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)47_storage": {
+              "label": "uint256[47]",
+              "numberOfBytes": "1504"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(uint256 => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol:IERC1155ReceiverUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\IERC1155ReceiverUpgradeable.sol:11",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "onERC1155Received(address,address,uint256,uint256,bytes)",
+          "onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol:IERC1155Upgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\IERC1155Upgradeable.sol:14",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "balanceOf(address,uint256)",
+          "balanceOfBatch(address[],uint256[])",
+          "setApprovalForAll(address,bool)",
+          "isApprovedForAll(address,address)",
+          "safeTransferFrom(address,address,uint256,uint256,bytes)",
+          "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol:ERC1155BurnableUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155BurnableUpgradeable.sol:15",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol:ERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol:IERC1155MetadataURIUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol:IERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "burn(address,uint256,uint256)",
+          "burnBatch(address,uint256[],uint256[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC165Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:40"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:31"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:34"
+            },
+            {
+              "label": "_uri",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_string_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:37"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_array(t_uint256)47_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:516"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC1155BurnableUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155BurnableUpgradeable.sol:43"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)47_storage": {
+              "label": "uint256[47]",
+              "numberOfBytes": "1504"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(uint256 => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol:ERC1155SupplyUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155SupplyUpgradeable.sol:17",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol:ERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol:IERC1155MetadataURIUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol:IERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "totalSupply(uint256)",
+          "exists(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC165Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:40"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:31"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:34"
+            },
+            {
+              "label": "_uri",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_string_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:37"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_array(t_uint256)47_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:516"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_mapping(t_uint256,t_uint256)",
+              "contract": "ERC1155SupplyUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155SupplyUpgradeable.sol:22"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "ERC1155SupplyUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155SupplyUpgradeable.sol:75"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)47_storage": {
+              "label": "uint256[47]",
+              "numberOfBytes": "1504"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(uint256 => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol:IERC1155MetadataURIUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\IERC1155MetadataURIUpgradeable.sol:14",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol:IERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable"
+        ],
+        "libraries": [],
+        "methods": [
+          "uri(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol:AddressUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol:9",
+        "version": {
+          "withMetadata": "ecf49121f7246b293433c4eee9efc5dea3df6f32736cc6b01b36c21efc57c2be",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol:181"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\AddressUpgradeable.sol:181"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:18",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol:StorageSlotUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\StorageSlotUpgradeable.sol:34",
+        "version": {
+          "withMetadata": "c1228ad32d5c45b61d124577cd8999102e6aa723d2d8dc0bfc66a49f060dd907",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol:StringsUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\StringsUpgradeable.sol:12",
+        "version": {
+          "withMetadata": "646b0a629d3979a961bc95e77723b59c8597d7dff6c56c16983f3429d54a2d52",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol:MathUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/SignedMathUpgradeable.sol:SignedMathUpgradeable"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:23",
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC165Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:40"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\IERC165Upgradeable.sol:15",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/MathUpgradeable.sol:MathUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\math\\MathUpgradeable.sol:9",
+        "version": {
+          "withMetadata": "ca62dbde8b6add72808f79e4b951ebc624173a4e2ac431627911c3bb28166df8",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/math/SignedMathUpgradeable.sol:SignedMathUpgradeable": {
+        "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\math\\SignedMathUpgradeable.sol:9",
+        "version": {
+          "withMetadata": "19502441b724ab52e66c7c0cd88035272d4b5f997c5924d6a467a2ecfb58eb96",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol:IERC1967": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\interfaces\\IERC1967.sol:11",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol:IERC1822Proxiable": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\interfaces\\draft-IERC1822.sol:10",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "proxiableUUID()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol:ERC1967Upgrade": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\proxy\\ERC1967\\ERC1967Upgrade.sol:18",
+        "inherit": [
+          "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol:IERC1967"
+        ],
+        "libraries": [
+          "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol:StorageSlot",
+          "lib/openzeppelin-contracts/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol:181"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol:181"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol:181"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol:Proxy": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\proxy\\Proxy.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol:IBeacon": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\proxy\\beacon\\IBeacon.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "implementation()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/Address.sol:Address": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol:9",
+        "version": {
+          "withMetadata": "03036065406f86c6ecb43b8250fc140eb45f66fb21193cb78b05232cea2b47e6",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol:181"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Address.sol:181"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol:StorageSlot": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\utils\\StorageSlot.sol:34",
+        "version": {
+          "withMetadata": "dc6f4c12c75062a1dc6b4ebde953e3565a915a1b8a56c0d0a97e66dbf1008a88",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/Strings.sol:Strings": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\utils\\Strings.sol:12",
+        "version": {
+          "withMetadata": "ff5ba00ae553675d1b657d3ad01231c55897dec37edc03503203ff8bd51684a0",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "lib/openzeppelin-contracts/contracts/utils/math/Math.sol:Math",
+          "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol:SignedMath"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/math/Math.sol:Math": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\utils\\math\\Math.sol:9",
+        "version": {
+          "withMetadata": "96a4838e084d056cbbfa35509f801a8344fd10d555a4614ad4012b5c493c14ce",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/math/SignedMath.sol:SignedMath": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\utils\\math\\SignedMath.sol:9",
+        "version": {
+          "withMetadata": "4d2f9324b3aa3f9d23ea03ab4bcef5daf9e7b32af4b880e905b50e0cb7f66626",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/structs/BitMaps.sol:BitMaps": {
+        "src": "lib\\openzeppelin-contracts\\contracts\\utils\\structs\\BitMaps.sol:9",
+        "version": {
+          "withMetadata": "0b202a0992ec01f13a82f669406d5a1a71755786529d561ab8288471045ba7eb",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "src/EditionsRoles.sol:EditionsRoles": {
+        "src": "src\\EditionsRoles.sol:4",
+        "version": {
+          "withMetadata": "60a3a4c81565070bc27bbadbd2749e76683db0880df13df32c66b503f5d9ff17",
+          "withoutMetadata": "9b1e3f717c60303bcfb97dbda55ced75265794726ef5635f998788385ce65799",
+          "linkedWithoutMetadata": "9b1e3f717c60303bcfb97dbda55ced75265794726ef5635f998788385ce65799"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "src/EditionsStructs.sol:EditionsStructs": {
+        "src": "src\\EditionsStructs.sol:15",
+        "version": {
+          "withMetadata": "39b182d3811ad185b1ecb695288734e545d01471b6e285f116dd541196a92f31",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "src/IRadarEditions.sol:IRadarEditions": {
+        "src": "src\\IRadarEditions.sol:7",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "setURI(string)",
+          "setProtocolFee(uint256)",
+          "setMaximumEditionFee(uint256)",
+          "getEditions()",
+          "getBalances(address)",
+          "approveEdition(uint256)",
+          "withdrawFunds(uint256)",
+          "createEdition(uint256,address,address,string)",
+          "withdrawEditionBalance(uint256,uint256)",
+          "stopEdition(uint256)",
+          "resumeEdition(uint256)",
+          "mintEdition(uint256,uint256,address,bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      },
+      "src/RadarEditions.sol:RadarEditions": {
+        "src": "src\\RadarEditions.sol:21",
+        "version": {
+          "withMetadata": "c93f92cf59e29baff89c04446e772755d9028da8932c26c4e18f3d5bbffbbbe6",
+          "withoutMetadata": "c0034ffa1ad4cc9a3b2d8dc5a1644066c0fe5ce235df76daae48c12bfa8f4177",
+          "linkedWithoutMetadata": "c0034ffa1ad4cc9a3b2d8dc5a1644066c0fe5ce235df76daae48c12bfa8f4177"
+        },
+        "inherit": [
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol:UUPSUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:ERC1967UpgradeUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol:IERC1967Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol:IERC1822ProxiableUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol:ERC1155SupplyUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol:ERC1155BurnableUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/security/PausableUpgradeable.sol:PausableUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol:AccessControlUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/ERC1155Upgradeable.sol:ERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol:IERC1155MetadataURIUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol:IERC1155Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol:IERC165Upgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol:IAccessControlUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol:ContextUpgradeable",
+          "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol:Initializable",
+          "src/IRadarEditions.sol:IRadarEditions"
+        ],
+        "libraries": [
+          "src/EditionsRoles.sol:EditionsRoles",
+          "lib/openzeppelin-contracts/contracts/utils/Strings.sol:Strings",
+          "src/EditionsStructs.sol:EditionsStructs",
+          "lib/openzeppelin-contracts/contracts/utils/structs/BitMaps.sol:BitMaps"
+        ],
+        "methods": [
+          "()",
+          "()",
+          "()",
+          "initialize()",
+          "contractURI()",
+          "uri(uint256)",
+          "setURI(string)",
+          "setProtocolFee(uint256)",
+          "setMaximumEditionFee(uint256)",
+          "pause()",
+          "unpause()",
+          "getEditions()",
+          "getBalances(address)",
+          "grantRole(bytes32,address)",
+          "approveEdition(uint256)",
+          "withdrawFunds(uint256)",
+          "createEdition(uint256,address,address,string)",
+          "withdrawEditionBalance(uint256,uint256)",
+          "stopEdition(uint256)",
+          "resumeEdition(uint256)",
+          "mintEdition(uint256,uint256,address,bytes)",
+          "believeProject(uint256,string)",
+          "removeBelief(uint256)",
+          "supportsInterface(bytes4)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\Initializable.sol:68"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\ContextUpgradeable.sol:36"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC165Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\utils\\introspection\\ERC165Upgradeable.sol:40"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:31"
+            },
+            {
+              "label": "_operatorApprovals",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_bool))",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:34"
+            },
+            {
+              "label": "_uri",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_string_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:37"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_array(t_uint256)47_storage",
+              "contract": "ERC1155Upgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\ERC1155Upgradeable.sol:516"
+            },
+            {
+              "label": "_roles",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)34_storage)",
+              "contract": "AccessControlUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\AccessControlUpgradeable.sol:66"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "AccessControlUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\access\\AccessControlUpgradeable.sol:264"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "201",
+              "type": "t_bool",
+              "contract": "PausableUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\security\\PausableUpgradeable.sol:29"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "202",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\security\\PausableUpgradeable.sol:116"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "251",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC1155BurnableUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155BurnableUpgradeable.sol:43"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "301",
+              "type": "t_mapping(t_uint256,t_uint256)",
+              "contract": "ERC1155SupplyUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155SupplyUpgradeable.sol:22"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "302",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "ERC1155SupplyUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\token\\ERC1155\\extensions\\ERC1155SupplyUpgradeable.sol:75"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "351",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC1967UpgradeUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:168"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "401",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "UUPSUpgradeable",
+              "src": "lib\\openzeppelin-contracts-upgradeable\\contracts\\proxy\\utils\\UUPSUpgradeable.sol:110"
+            },
+            {
+              "label": "protocolFee",
+              "offset": 0,
+              "slot": "451",
+              "type": "t_uint256",
+              "contract": "RadarEditions",
+              "src": "src\\RadarEditions.sol:31"
+            },
+            {
+              "label": "editions",
+              "offset": 0,
+              "slot": "452",
+              "type": "t_mapping(t_uint256,t_struct(Edition)6864_storage)",
+              "contract": "RadarEditions",
+              "src": "src\\RadarEditions.sol:33"
+            },
+            {
+              "label": "editionCounter",
+              "offset": 0,
+              "slot": "453",
+              "type": "t_uint256",
+              "contract": "RadarEditions",
+              "src": "src\\RadarEditions.sol:35"
+            },
+            {
+              "label": "maximumEditionFee",
+              "offset": 0,
+              "slot": "454",
+              "type": "t_uint256",
+              "contract": "RadarEditions",
+              "src": "src\\RadarEditions.sol:37"
+            },
+            {
+              "label": "_beliefs",
+              "offset": 0,
+              "slot": "455",
+              "type": "t_mapping(t_address,t_struct(BitMap)6677_storage)",
+              "contract": "RadarEditions",
+              "src": "src\\RadarEditions.sol:40"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)47_storage": {
+              "label": "uint256[47]",
+              "numberOfBytes": "1504"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_enum(EditionStatus)6852": {
+              "label": "enum EditionsStructs.EditionStatus",
+              "members": [
+                "NotCreated",
+                "Created",
+                "Launched",
+                "Stopped"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+              "label": "mapping(address => mapping(address => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(BitMap)6677_storage)": {
+              "label": "mapping(address => struct BitMaps.BitMap)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(RoleData)34_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(uint256 => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(Edition)6864_storage)": {
+              "label": "mapping(uint256 => struct EditionsStructs.Edition)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(BitMap)6677_storage": {
+              "label": "struct BitMaps.BitMap",
+              "members": [
+                {
+                  "label": "_data",
+                  "type": "t_mapping(t_uint256,t_uint256)",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "32"
+            },
+            "t_struct(Edition)6864_storage": {
+              "label": "struct EditionsStructs.Edition",
+              "members": [
+                {
+                  "label": "status",
+                  "type": "t_enum(EditionStatus)6852",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "fee",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "owner",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "id",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "4"
+                }
+              ],
+              "numberOfBytes": "160"
+            },
+            "t_struct(RoleData)34_storage": {
+              "label": "struct AccessControlUpgradeable.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_mapping(t_address,t_bool)",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.8.19"
+      },
+      "src/RadarEditionsProxy.sol:RadarEditionsProxy": {
+        "src": "src\\RadarEditionsProxy.sol:9",
+        "version": {
+          "withMetadata": "e2c79caa638508ce7e11a510cf8d62a4432212636c5abbe46a95cedb143a0b1f",
+          "withoutMetadata": "13e2c506add18e93f4c562ed80fadb33fbbb9a077f8e212d2c3aa29a1c1bc216",
+          "linkedWithoutMetadata": "13e2c506add18e93f4c562ed80fadb33fbbb9a077f8e212d2c3aa29a1c1bc216"
+        },
+        "inherit": [
+          "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol:ERC1967Upgrade",
+          "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol:IERC1967",
+          "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol:Proxy"
+        ],
+        "libraries": [],
+        "methods": [
+          "(address)",
+          "initialize()"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "RadarEditionsProxy",
+            "src": "src\\RadarEditionsProxy.sol:12"
+          },
+          {
+            "kind": "state-variable-immutable",
+            "name": "defaultImplementation",
+            "src": "src\\RadarEditionsProxy.sol:10"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.19"
+      }
+    },
+    {
+      "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol:AccessControlUpgradeable": {
         "src": "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol:51",
         "inherit": [
           "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol:ERC165Upgradeable",

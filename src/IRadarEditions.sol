@@ -7,25 +7,11 @@ import {EditionsRoles} from "./EditionsRoles.sol";
 interface IRadarEditions {
     event EditionApproved(uint256 editionId);
     event EditionCreated(uint256 editionId, uint256 fee, address owner);
-    event EditionBalanceWithdrawn(
-        uint256 editionId,
-        uint256 amount,
-        address owner
-    );
+    event EditionBalanceWithdrawn(uint256 editionId, uint256 amount, address owner);
     event EditionStopped(uint256 editionId);
     event EditionResumed(uint256 editionId);
-    // TODO: fix this lazy way of emitting signature hash in event
-    event EditionBelieved(
-        address indexed believer,
-        uint256 indexed editionId,
-        bytes32 hashOne,
-        bytes32 hashTwo,
-        bytes32 hashThree
-    );
-    event EditionBeliefRemoved(
-        address indexed believer,
-        uint256 indexed editionId
-    );
+    event EditionBelieved(uint256 indexed editionId, string tags);
+    event EditionBeliefRemoved(uint256 indexed editionId);
 
     function setURI(string memory newuri) external;
 
@@ -33,14 +19,9 @@ interface IRadarEditions {
 
     function setMaximumEditionFee(uint256 _maximumEditionFee) external;
 
-    function getEditions()
-        external
-        view
-        returns (EditionsStructs.Edition[] memory);
+    function getEditions() external view returns (EditionsStructs.Edition[] memory);
 
-    function getBalances(
-        address owner
-    ) external view returns (EditionsStructs.EditionIdWithAmount[] memory);
+    function getBalances(address owner) external view returns (EditionsStructs.EditionIdWithAmount[] memory);
 
     /// admin methods
 
@@ -50,12 +31,9 @@ interface IRadarEditions {
 
     /// edition owner methods
 
-    function createEdition(
-        uint256 fee,
-        address owner,
-        address payer,
-        string memory id
-    ) external returns (uint256 editionId);
+    function createEdition(uint256 fee, address owner, address payer, string memory id)
+        external
+        returns (uint256 editionId);
 
     function withdrawEditionBalance(uint256 editionId, uint256 amount) external;
 
@@ -65,10 +43,5 @@ interface IRadarEditions {
 
     /// user methods
 
-    function mintEdition(
-        uint256 editionId,
-        uint256 amount,
-        address buyer,
-        bytes memory data
-    ) external payable;
+    function mintEdition(uint256 editionId, uint256 amount, address buyer, bytes memory data) external payable;
 }

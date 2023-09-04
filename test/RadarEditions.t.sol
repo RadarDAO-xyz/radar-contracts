@@ -22,18 +22,14 @@ contract RadarEditionsTest is Test {
         implementation = new RadarEditions();
         proxy = new RadarEditionsProxy(address(implementation));
 
-        (bool success, ) = address(proxy).call(
-            abi.encodeWithSignature("setProtocolFee(uint256)", protocolFee)
-        );
+        (bool success,) = address(proxy).call(abi.encodeWithSignature("setProtocolFee(uint256)", protocolFee));
         assertTrue(success);
 
         vm.stopBroadcast();
     }
 
     function test_initializable() external {
-        (bool success, ) = address(proxy).call(
-            abi.encodeWithSignature("initialize(address)", owner)
-        );
+        (bool success,) = address(proxy).call(abi.encodeWithSignature("initialize(address)", owner));
         assertTrue(success);
     }
 
@@ -42,25 +38,15 @@ contract RadarEditionsTest is Test {
 
         console.log(fee, protocolFee);
         vm.prank(user);
-        (bool success, ) = address(proxy).call(
-            abi.encodeWithSignature("createEdition(uint256)", fee)
-        );
+        (bool success,) = address(proxy).call(abi.encodeWithSignature("createEdition(uint256)", fee));
         assertTrue(success);
 
         assertEq(implementation.editionCounter(), 1);
 
-        (
-            EditionsStructs.EditionStatus status,
-            uint256 _fee,
-            uint256 balance,
-            address _owner,
+        (EditionsStructs.EditionStatus status, uint256 _fee, uint256 balance, address _owner,) =
+            implementation.editions(0);
 
-        ) = implementation.editions(0);
-
-        assertEq(
-            uint256(status),
-            uint256(EditionsStructs.EditionStatus.Created)
-        );
+        assertEq(uint256(status), uint256(EditionsStructs.EditionStatus.Created));
         assertEq(_fee, fee);
         assertEq(balance, 0);
         assertEq(_owner, user);
