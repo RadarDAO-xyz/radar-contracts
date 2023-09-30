@@ -1,56 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsRoles.sol": {
-      "lastModificationDate": 1691357866305,
-      "contentHash": "d4ae132dfd9f73b12feccb232c64c07b",
-      "sourceName": "src/EditionsRoles.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
-          ]
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "EditionsRoles"
-      ]
-    },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1695226352912,
-      "contentHash": "100e471e075f1d18854c59c9b2354727",
+      "lastModificationDate": 1696081515941,
+      "contentHash": "29dabef385eb300cf719e496c472c90e",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -88,18 +41,9 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
-        "@openzeppelin/contracts/utils/structs/BitMaps.sol",
-        "@openzeppelin/contracts/utils/Strings.sol",
-        "./IRadarEditions.sol",
-        "./EditionsRoles.sol",
-        "./EditionsStructs.sol"
+        "./Editions/Editions.sol",
+        "./Editions/EditionsRoles.sol",
+        "./IRadarEditions.sol"
       ],
       "versionPragmas": [
         "^0.8.13"
@@ -109,8 +53,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/IRadarEditions.sol": {
-      "lastModificationDate": 1694246326710,
-      "contentHash": "ed8d284fb9fcf4c929af6f79ba227f7b",
+      "lastModificationDate": 1696081151343,
+      "contentHash": "fad503726d7615afe565c5b0863adae1",
       "sourceName": "src/IRadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -148,61 +92,15 @@
         }
       },
       "imports": [
-        "./EditionsStructs.sol",
-        "./EditionsRoles.sol"
+        "./Editions/EditionsStructs.sol",
+        "./Editions/EditionsRoles.sol",
+        "./Editions/IEditions.sol"
       ],
       "versionPragmas": [
         "^0.8.13"
       ],
       "artifacts": [
         "IRadarEditions"
-      ]
-    },
-    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/EditionsStructs.sol": {
-      "lastModificationDate": 1693486720953,
-      "contentHash": "87b6ede72e0a904c60f6e407feccb434",
-      "sourceName": "src/EditionsStructs.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
-          ]
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "EditionsStructs"
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts-upgradeable/contracts/security/PausableUpgradeable.sol": {
@@ -1974,8 +1872,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarVideoNFT.sol": {
-      "lastModificationDate": 1695936901760,
-      "contentHash": "eb342b4a056a6ddcb67f4dda08d96211",
+      "lastModificationDate": 1696081231723,
+      "contentHash": "52ef19efc54693e5d6122194e3863ebd",
       "sourceName": "src/RadarVideoNFT.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2409,6 +2307,210 @@
       ],
       "artifacts": [
         "IBeacon"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/Editions.sol": {
+      "lastModificationDate": 1696081615418,
+      "contentHash": "b2b0c2a6a702c33a9b841f2d81c7efd7",
+      "sourceName": "src/Editions/Editions.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155BurnableUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "@openzeppelin/contracts/utils/structs/BitMaps.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
+        "./EditionsRoles.sol",
+        "./IEditions.sol",
+        "./EditionsStructs.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Editions"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/IEditions.sol": {
+      "lastModificationDate": 1696081135778,
+      "contentHash": "0e4d3e57fc401dc073bc49e972a68359",
+      "sourceName": "src/Editions/IEditions.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [
+        "./EditionsStructs.sol",
+        "./EditionsRoles.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IEditions"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/EditionsRoles.sol": {
+      "lastModificationDate": 1696080701122,
+      "contentHash": "d4ae132dfd9f73b12feccb232c64c07b",
+      "sourceName": "src/Editions/EditionsRoles.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "EditionsRoles"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/EditionsStructs.sol": {
+      "lastModificationDate": 1696080701193,
+      "contentHash": "87b6ede72e0a904c60f6e407feccb434",
+      "sourceName": "src/Editions/EditionsStructs.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "EditionsStructs"
       ]
     }
   }

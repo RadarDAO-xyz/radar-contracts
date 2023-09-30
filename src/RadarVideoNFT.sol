@@ -41,12 +41,12 @@ contract RadarVideoNFT is
 
     function mint(
         address owner,
-        string memory tokenURI
+        string memory tokenUri
     ) public returns (uint256) {
         uint256 tokenId = _tokenIdCounter;
         _mint(owner, tokenId);
-        _setTokenURI(tokenId, tokenURI);
-        emit Mint(msg.sender, owner, tokenURI, tokenId);
+        _setTokenURI(tokenId, tokenUri);
+        emit Mint(msg.sender, owner, tokenUri, tokenId);
 
         _tokenIdCounter += 1;
 

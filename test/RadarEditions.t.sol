@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import "forge-std/console.sol";
 import "forge-std/Test.sol";
 
-import "../src/EditionsStructs.sol";
+import "../src/Editions/EditionsStructs.sol";
 import {RadarEditions} from "../src/RadarEditions.sol";
 import {RadarEditionsProxy} from "../src/RadarEditionsProxy.sol";
 

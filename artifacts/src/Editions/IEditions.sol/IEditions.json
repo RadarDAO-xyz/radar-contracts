@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
-  "contractName": "IRadarEditions",
-  "sourceName": "src/IRadarEditions.sol",
+  "contractName": "IEditions",
+  "sourceName": "src/Editions/IEditions.sol",
   "abi": [
     {
       "anonymous": false,
@@ -322,45 +322,6 @@
         }
       ],
       "name": "resumeEdition",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_maximumEditionFee",
-          "type": "uint256"
-        }
-      ],
-      "name": "setMaximumEditionFee",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_protocolFee",
-          "type": "uint256"
-        }
-      ],
-      "name": "setProtocolFee",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "string",
-          "name": "newuri",
-          "type": "string"
-        }
-      ],
-      "name": "setURI",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
