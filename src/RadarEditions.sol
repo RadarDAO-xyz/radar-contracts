@@ -1,11 +1,22 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
+
 import {Editions} from "./Editions/Editions.sol";
 import {EditionsRoles} from "./Editions/EditionsRoles.sol";
 import {IRadarEditions} from "./IRadarEditions.sol";
 
 contract RadarEditions is Editions, IRadarEditions {
+    function contractURI() public view returns (string memory) {
+        return "https://radarlaunch.app/api/metadata";
+    }
+
+    function uri(uint256 id) public view override returns (string memory) {
+        return string.concat(super.uri(id), Strings.toString(id));
+    }
+
     function setURI(
         string memory newuri
     ) public override onlyRole(EditionsRoles.URI_SETTER_ROLE) {

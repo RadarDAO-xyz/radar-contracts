@@ -10,7 +10,6 @@ import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Ini
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
-import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 import {EditionsRoles} from "./EditionsRoles.sol";
 import {IEditions} from "./IEditions.sol";
@@ -58,14 +57,6 @@ contract Editions is
         _grantRole(EditionsRoles.URI_SETTER_ROLE, msg.sender);
         _grantRole(EditionsRoles.PAUSER_ROLE, msg.sender);
         _grantRole(EditionsRoles.UPGRADER_ROLE, msg.sender);
-    }
-
-    function contractURI() public view returns (string memory) {
-        return "https://radarlaunch.app/api/metadata";
-    }
-
-    function uri(uint256 id) public view override returns (string memory) {
-        return string.concat(super.uri(id), Strings.toString(id));
     }
 
     function pause() public onlyRole(EditionsRoles.PAUSER_ROLE) {
@@ -137,8 +128,6 @@ contract Editions is
         _grantRole(role, account);
     }
 
-    /// admin methods
-
     function approveEdition(
         uint256 editionId
     ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
@@ -172,13 +161,28 @@ contract Editions is
         }
     }
 
+    function updateEdition(
+        uint256 editionId,
+        string memory id,
+        string memory briefId
+    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+        if (
+            editions[editionId].status != EditionsStructs.EditionStatus.Launched
+        ) {
+            revert EditionNotCreated();
+        }
+        editions[editionId].id = id;
+        editions[editionId].briefId = briefId;
+    }
+
     /// edition owner methods
 
     function createEdition(
         uint256 fee,
         address owner,
         address payer,
-        string memory id
+        string memory id,
+        string memory briefId
     ) external override returns (uint256 editionId) {
         if (fee > maximumEditionFee) {
             revert EditionFeeExceedsMaximumFee();
@@ -189,11 +193,12 @@ contract Editions is
             fee: fee,
             balance: 0,
             owner: owner,
-            id: id
+            id: id,
+            briefId: briefId
         });
         editionCounter++;
 
-        emit EditionCreated(editionId, fee, owner);
+        emit EditionCreated(editionId, briefId, fee, owner);
     }
 
     function withdrawEditionBalance(

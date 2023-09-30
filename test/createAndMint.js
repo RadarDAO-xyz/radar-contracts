@@ -27,12 +27,16 @@ describe("sample test", async function () {
       1,
       owner,
       "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "id",
+      "briefId",
       {
         value: editionFee + protocolFee,
       }
     );
 
-    console.log(await instance.editions(0));
+    const edition = await instance.editions(0);
+
+    console.log({ edition });
 
     console.log(await ethers.provider.getBalance(instance.getAddress()));
 

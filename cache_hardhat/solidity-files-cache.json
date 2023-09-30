@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1696081515941,
-      "contentHash": "29dabef385eb300cf719e496c472c90e",
+      "lastModificationDate": 1696082904201,
+      "contentHash": "0c9819da7626c84ad4e1d5d8d32a251c",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -41,6 +41,8 @@
         }
       },
       "imports": [
+        "@openzeppelin/contracts/utils/structs/BitMaps.sol",
+        "@openzeppelin/contracts/utils/Strings.sol",
         "./Editions/Editions.sol",
         "./Editions/EditionsRoles.sol",
         "./IRadarEditions.sol"
@@ -53,8 +55,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/IRadarEditions.sol": {
-      "lastModificationDate": 1696081151343,
-      "contentHash": "fad503726d7615afe565c5b0863adae1",
+      "lastModificationDate": 1696082738376,
+      "contentHash": "279e75149b5ef2eadae9d3c45c36a60c",
       "sourceName": "src/IRadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -1924,56 +1926,6 @@
         "RadarVideoNFT"
       ]
     },
-    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditionsProxy.sol": {
-      "lastModificationDate": 1691357866308,
-      "contentHash": "d61ce783d8033ec78d2b940abfb28319",
-      "sourceName": "src/RadarEditionsProxy.sol",
-      "solcConfig": {
-        "version": "0.8.19",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "remappings": [
-            "ds-test/=lib/forge-std/lib/ds-test/src/",
-            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
-            "forge-std/=lib/forge-std/src/",
-            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
-            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
-            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
-            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
-            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
-          ]
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
-        "@openzeppelin/contracts/proxy/Proxy.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "RadarEditionsProxy"
-      ]
-    },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/lib/openzeppelin-contracts/contracts/proxy/Proxy.sol": {
       "lastModificationDate": 1691019093908,
       "contentHash": "40b3d81a836d50ff47e03893dcaaf204",
@@ -2310,8 +2262,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/Editions.sol": {
-      "lastModificationDate": 1696081615418,
-      "contentHash": "b2b0c2a6a702c33a9b841f2d81c7efd7",
+      "lastModificationDate": 1696083201215,
+      "contentHash": "eb4100ff3366a45dd56f7fccec99c110",
       "sourceName": "src/Editions/Editions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2357,7 +2309,6 @@
         "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
         "@openzeppelin/contracts/utils/structs/BitMaps.sol",
-        "@openzeppelin/contracts/utils/Strings.sol",
         "./EditionsRoles.sol",
         "./IEditions.sol",
         "./EditionsStructs.sol"
@@ -2370,8 +2321,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/IEditions.sol": {
-      "lastModificationDate": 1696081135778,
-      "contentHash": "0e4d3e57fc401dc073bc49e972a68359",
+      "lastModificationDate": 1696083381525,
+      "contentHash": "410b13e979e5fecb4d26591fefb98cbe",
       "sourceName": "src/Editions/IEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2409,6 +2360,7 @@
         }
       },
       "imports": [
+        "../Beliefs/IBeliefs.sol",
         "./EditionsStructs.sol",
         "./EditionsRoles.sol"
       ],
@@ -2467,8 +2419,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/EditionsStructs.sol": {
-      "lastModificationDate": 1696080701193,
-      "contentHash": "87b6ede72e0a904c60f6e407feccb434",
+      "lastModificationDate": 1696082989072,
+      "contentHash": "7b531289837057a3c40437ade3337dfb",
       "sourceName": "src/Editions/EditionsStructs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2511,6 +2463,53 @@
       ],
       "artifacts": [
         "EditionsStructs"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/IBeliefs.sol": {
+      "lastModificationDate": 1696082474611,
+      "contentHash": "ccad78866252f2dcfc88d7041fdd16a9",
+      "sourceName": "src/Beliefs/IBeliefs.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IBeliefs"
       ]
     }
   }

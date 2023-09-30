@@ -5,6 +5,7 @@ import {EditionsStructs} from "./Editions/EditionsStructs.sol";
 import {EditionsRoles} from "./Editions/EditionsRoles.sol";
 import {IEditions} from "./Editions/IEditions.sol";
 
+
 interface IRadarEditions is IEditions {
     function setURI(string memory newuri) external;
 

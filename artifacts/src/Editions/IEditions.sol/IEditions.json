@@ -96,6 +96,12 @@
         },
         {
           "indexed": false,
+          "internalType": "string",
+          "name": "briefId",
+          "type": "string"
+        },
+        {
+          "indexed": false,
           "internalType": "uint256",
           "name": "fee",
           "type": "uint256"
@@ -188,6 +194,11 @@
           "internalType": "string",
           "name": "id",
           "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "briefId",
+          "type": "string"
         }
       ],
       "name": "createEdition",
@@ -262,6 +273,11 @@
               "internalType": "string",
               "name": "id",
               "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "briefId",
+              "type": "string"
             }
           ],
           "internalType": "struct EditionsStructs.Edition[]",
@@ -335,6 +351,29 @@
         }
       ],
       "name": "stopEdition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "editionId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "id",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "briefId",
+          "type": "string"
+        }
+      ],
+      "name": "updateEdition",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"

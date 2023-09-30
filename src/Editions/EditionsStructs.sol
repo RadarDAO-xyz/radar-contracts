@@ -27,6 +27,7 @@ library EditionsStructs {
         uint256 balance;
         address owner;
         string id;
+        string briefId;
     }
 
     struct EditionIdWithAmount {
