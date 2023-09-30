@@ -1,4 +1,5 @@
-const { expect } = require("chai");
+import { expect } from "chai";
+import { ethers, upgrades } from "hardhat";
 
 describe("RadarEditions", async function () {
   const protocolFee = 10000;

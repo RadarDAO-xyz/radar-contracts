@@ -1,4 +1,4 @@
-const { ethers, upgrades } = require("hardhat");
+import { ethers, upgrades } from "hardhat";
 
 async function main() {
   // Deploying
@@ -9,4 +9,4 @@ async function main() {
   console.log("Implementation address", await instance.getAddress());
 }
 
-main().catch(console.err);
+main().catch(console.error);

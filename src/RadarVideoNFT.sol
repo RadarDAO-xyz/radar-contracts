@@ -16,12 +16,7 @@ contract RadarVideoNFT is
 {
     uint256 private _tokenIdCounter;
 
-    event Mint(
-        address indexed sender,
-        address indexed owner,
-        string tokenURI,
-        uint256 tokenId
-    );
+    event Mint(address indexed sender, address indexed owner, string tokenURI, uint256 tokenId);
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -35,14 +30,9 @@ contract RadarVideoNFT is
         __UUPSUpgradeable_init();
     }
 
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyOwner {}
+    function _authorizeUpgrade(address newImplementation) internal override onlyOwner {}
 
-    function mint(
-        address owner,
-        string memory tokenUri
-    ) public returns (uint256) {
+    function mint(address owner, string memory tokenUri) public returns (uint256) {
         uint256 tokenId = _tokenIdCounter;
         _mint(owner, tokenId);
         _setTokenURI(tokenId, tokenUri);
@@ -59,15 +49,11 @@ contract RadarVideoNFT is
 
     // The following functions are overrides required by Solidity.
 
-    function _burn(
-        uint256 tokenId
-    ) internal override(ERC721Upgradeable, ERC721URIStorageUpgradeable) {
+    function _burn(uint256 tokenId) internal override(ERC721Upgradeable, ERC721URIStorageUpgradeable) {
         super._burn(tokenId);
     }
 
-    function tokenURI(
-        uint256 tokenId
-    )
+    function tokenURI(uint256 tokenId)
         public
         view
         override(ERC721Upgradeable, ERC721URIStorageUpgradeable)
@@ -76,9 +62,7 @@ contract RadarVideoNFT is
         return super.tokenURI(tokenId);
     }
 
-    function supportsInterface(
-        bytes4 interfaceId
-    )
+    function supportsInterface(bytes4 interfaceId)
         public
         view
         override(ERC721Upgradeable, ERC721URIStorageUpgradeable)

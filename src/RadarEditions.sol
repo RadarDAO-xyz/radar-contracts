@@ -17,23 +17,17 @@ contract RadarEditions is Editions, IRadarEditions {
         return string.concat(super.uri(id), Strings.toString(id));
     }
 
-    function setURI(
-        string memory newuri
-    ) public override onlyRole(EditionsRoles.URI_SETTER_ROLE) {
+    function setURI(string memory newuri) public override onlyRole(EditionsRoles.URI_SETTER_ROLE) {
         _setURI(newuri);
     }
 
     /// admin methods
 
-    function setProtocolFee(
-        uint256 _protocolFee
-    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+    function setProtocolFee(uint256 _protocolFee) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         protocolFee = _protocolFee;
     }
 
-    function setMaximumEditionFee(
-        uint256 _maximumEditionFee
-    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+    function setMaximumEditionFee(uint256 _maximumEditionFee) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         maximumEditionFee = _maximumEditionFee;
     }
 }

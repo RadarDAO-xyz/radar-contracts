@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1696082904201,
-      "contentHash": "0c9819da7626c84ad4e1d5d8d32a251c",
+      "lastModificationDate": 1696085254386,
+      "contentHash": "7d205b1e40e8ab755f916e353af12d8b",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -55,8 +55,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/IRadarEditions.sol": {
-      "lastModificationDate": 1696082738376,
-      "contentHash": "279e75149b5ef2eadae9d3c45c36a60c",
+      "lastModificationDate": 1696085254386,
+      "contentHash": "fad503726d7615afe565c5b0863adae1",
       "sourceName": "src/IRadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -1874,8 +1874,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarVideoNFT.sol": {
-      "lastModificationDate": 1696081231723,
-      "contentHash": "52ef19efc54693e5d6122194e3863ebd",
+      "lastModificationDate": 1696085254386,
+      "contentHash": "379781782ef8b318cd055540743f6b6b",
       "sourceName": "src/RadarVideoNFT.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2262,8 +2262,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/Editions.sol": {
-      "lastModificationDate": 1696083201215,
-      "contentHash": "eb4100ff3366a45dd56f7fccec99c110",
+      "lastModificationDate": 1696085254391,
+      "contentHash": "584b15af3d3527aee96aa7b582105c35",
       "sourceName": "src/Editions/Editions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2321,8 +2321,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/IEditions.sol": {
-      "lastModificationDate": 1696083381525,
-      "contentHash": "410b13e979e5fecb4d26591fefb98cbe",
+      "lastModificationDate": 1696085254386,
+      "contentHash": "961adc7b7c3d810ee907d00a45ca80f3",
       "sourceName": "src/Editions/IEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2466,8 +2466,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/IBeliefs.sol": {
-      "lastModificationDate": 1696082474611,
-      "contentHash": "ccad78866252f2dcfc88d7041fdd16a9",
+      "lastModificationDate": 1696085254386,
+      "contentHash": "8cb4809788d1c4c1c9df7b0f2f45aca2",
       "sourceName": "src/Beliefs/IBeliefs.sol",
       "solcConfig": {
         "version": "0.8.19",

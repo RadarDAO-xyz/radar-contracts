@@ -1,10 +1,12 @@
-require("@nomicfoundation/hardhat-foundry");
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-ethers");
-require("@nomicfoundation/hardhat-verify");
-require("@openzeppelin/hardhat-upgrades");
+import "@nomicfoundation/hardhat-foundry";
+import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-ethers";
+import "@nomicfoundation/hardhat-verify";
+import "@openzeppelin/hardhat-upgrades";
 
-require("dotenv").config();
+import { config } from "dotenv";
+
+config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
