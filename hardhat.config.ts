@@ -8,6 +8,15 @@ import { config } from "dotenv";
 
 config();
 
+const accounts =
+  process.env.PRIVATE_KEY && process.env.PRIVATE_KEY.length > 0
+    ? [process.env.PRIVATE_KEY]
+    : {
+        mnemonic: "test test test test test test test test test test test junk",
+        count: 10,
+        path: "m/44'/60'/0'/0",
+      };
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
@@ -21,13 +30,13 @@ module.exports = {
   networks: {
     "optimism-goerli": {
       url: `https://optimism-goerli.infura.io/v3/${process.env.INFURA_KEY}`,
-      accounts: [process.env.PRIVATE_KEY],
+      accounts,
       gas: 1000000,
       gasPrice: 2000000000,
     },
     optimism: {
       url: `https://optimism-mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-      accounts: [process.env.PRIVATE_KEY],
+      accounts,
     },
   },
   etherscan: {
