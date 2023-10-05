@@ -6,7 +6,7 @@ import {EditionsRoles} from "./Editions/EditionsRoles.sol";
 import {IEditions} from "./Editions/IEditions.sol";
 import {IBeliefs} from "./Beliefs/IBeliefs.sol";
 
-interface IRadarEditions is IEditions, IBeliefs {
+interface IRadarEditions {
     function setURI(string memory newuri) external;
 
     function setProtocolFee(uint256 _protocolFee) external;
