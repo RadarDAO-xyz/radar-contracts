@@ -15,3 +15,10 @@
 ```sh
 PRIVATE_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 forge script script/Deploy.s.sol:Deploy --rpc-url https://optimism.publicnode.com
 ```
+
+
+## TODO
+- [ ] improve struct packing
+- [ ] add tests
+- [ ] use USDC instead of ETH
+- [ ] implement splits

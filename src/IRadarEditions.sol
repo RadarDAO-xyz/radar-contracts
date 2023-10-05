@@ -11,4 +11,6 @@ interface IRadarEditions is IEditions {
     function setProtocolFee(uint256 _protocolFee) external;
 
     function setMaximumEditionFee(uint256 _maximumEditionFee) external;
+
+    function setFutureFundFee(uint256 _futureFundFee) external;
 }

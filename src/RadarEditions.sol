@@ -30,4 +30,8 @@ contract RadarEditions is Editions, IRadarEditions {
     function setMaximumEditionFee(uint256 _maximumEditionFee) external override onlyRole(DEFAULT_ADMIN_ROLE) {
         maximumEditionFee = _maximumEditionFee;
     }
+
+    function setFutureFundFee(uint256 _futureFundFee) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+        futureFundFee = _futureFundFee;
+    }
 }

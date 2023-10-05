@@ -2262,8 +2262,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/Editions.sol": {
-      "lastModificationDate": 1696085254391,
-      "contentHash": "584b15af3d3527aee96aa7b582105c35",
+      "lastModificationDate": 1696285769335,
+      "contentHash": "1d70e314ba5c37d2b2db253e4687f381",
       "sourceName": "src/Editions/Editions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2321,8 +2321,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/IEditions.sol": {
-      "lastModificationDate": 1696085254386,
-      "contentHash": "961adc7b7c3d810ee907d00a45ca80f3",
+      "lastModificationDate": 1696285733255,
+      "contentHash": "a3a6938883fa006256630be55cf32a06",
       "sourceName": "src/Editions/IEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2419,8 +2419,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/EditionsStructs.sol": {
-      "lastModificationDate": 1696082989072,
-      "contentHash": "7b531289837057a3c40437ade3337dfb",
+      "lastModificationDate": 1696285783536,
+      "contentHash": "3138bf182ee6db453bf097dc78d53dc4",
       "sourceName": "src/Editions/EditionsStructs.sol",
       "solcConfig": {
         "version": "0.8.19",

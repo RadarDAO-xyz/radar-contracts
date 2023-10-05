@@ -12,6 +12,7 @@ import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Ini
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 import {EditionsRoles} from "./EditionsRoles.sol";
 import {IEditions} from "./IEditions.sol";
@@ -36,7 +37,13 @@ contract Editions is
     uint256 public maximumEditionFee;
 
     // mapping of users to projects they believe in
-    mapping(address => BitMaps.BitMap) internal _beliefs;
+    mapping(address user => BitMaps.BitMap beliefs) internal _beliefs;
+    // array of users who have believed in some project
+    address[] internal _believers;
+
+    uint256 public futureFundFee;
+
+    mapping(address user => uint256 balance) public balances;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -138,11 +145,29 @@ contract Editions is
         override
         onlyRole(DEFAULT_ADMIN_ROLE)
     {
-        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
+        if (editions[editionId].status == EditionsStructs.EditionStatus.NotCreated) {
             revert EditionNotCreated();
         }
         editions[editionId].id = id;
         editions[editionId].briefId = briefId;
+    }
+
+    function mintEdition(uint256 editionId, uint256 amount, address buyer, bytes memory data)
+        external
+        payable
+        override
+        onlyRole(DEFAULT_ADMIN_ROLE)
+    {
+        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
+            revert EditionNotLaunched();
+        }
+        if (msg.value < (editions[editionId].fee + protocolFee) * amount) {
+            revert NotEnoughFunds();
+        }
+
+        _mint(buyer, editionId, amount, data);
+
+        editions[editionId].balance += msg.value - amount * protocolFee;
     }
 
     /// edition owner methods
@@ -214,28 +239,53 @@ contract Editions is
 
     /// user methods
 
-    function mintEdition(uint256 editionId, uint256 amount, address buyer, bytes memory data)
-        external
-        payable
-        override
-    {
+    function believeProject(uint256 editionId, string memory tags) external payable override {
+        if (msg.value < futureFundFee) {
+            revert NotEnoughFunds();
+        }
         if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
             revert EditionNotLaunched();
         }
-        if (msg.value < (editions[editionId].fee + protocolFee) * amount) {
-            revert NotEnoughFunds();
+
+        uint256 projectFee = msg.value / 2;
+        uint256 poolFee = msg.value / 5;
+
+        /// distribute to project
+        editions[editionId].balance += projectFee;
+
+        /// distribute to other builders in pool
+        string memory briefId = editions[editionId].briefId;
+        address[] memory builders = new address[](editionCounter);
+        uint256 buildersCounter = 0;
+
+        uint256 i = 0;
+        for (; i < editionCounter && i != editionId; i++) {
+            EditionsStructs.Edition memory edition = editions[i];
+            if (Strings.equal(edition.briefId, briefId)) {
+                builders[buildersCounter] = edition.owner;
+                buildersCounter += 1;
+            }
+        }
+        if (builders.length > 0) {
+            uint256 amount = poolFee / buildersCounter;
+            for (i = 0; i < buildersCounter; i++) {
+                balances[builders[i]] += amount;
+            }
         }
 
-        _mint(buyer, editionId, amount, data);
-
-        editions[editionId].balance += msg.value - amount * protocolFee;
-    }
-
-    function believeProject(uint256 editionId, string memory tags) external override {
-        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
-            revert EditionNotCreated();
+        /// update belief data
+        bool believerExists = false;
+        for (i = 0; i < _believers.length; i++) {
+            if (_believers[i] == msg.sender) {
+                believerExists = _believers[i] == msg.sender;
+                break;
+            }
+        }
+        if (!believerExists) {
+            _believers.push(msg.sender);
         }
         BitMaps.set(_beliefs[msg.sender], editionId);
+
         emit EditionBelieved(editionId, msg.sender, tags);
     }
 

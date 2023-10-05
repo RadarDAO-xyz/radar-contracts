@@ -5,7 +5,7 @@ interface IBeliefs {
     event EditionBelieved(uint256 indexed editionId, address indexed believer, string tags);
     event EditionBeliefRemoved(uint256 indexed editionId, address indexed believer);
 
-    function believeProject(uint256 editionId, string memory tags) external;
+    function believeProject(uint256 editionId, string memory tags) external payable;
 
     function removeBelief(uint256 editionId) external;
 }
