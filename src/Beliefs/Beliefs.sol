@@ -17,8 +17,6 @@ contract Beliefs is IBeliefs, Editions {
     // array of users who have believed in some project
     address[] internal _believers;
 
-    /// user methods
-
     function believeProject(uint256 editionId, string memory tags) external payable override {
         if (msg.value < futureFundFee) {
             revert NotEnoughFunds();
