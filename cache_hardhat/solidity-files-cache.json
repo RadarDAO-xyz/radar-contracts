@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1696546803512,
+      "lastModificationDate": 1696548850214,
       "contentHash": "e94707aa4b40aae6aa974599a7a35dad",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
@@ -2262,8 +2262,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/Editions.sol": {
-      "lastModificationDate": 1696546803514,
-      "contentHash": "c69ecbd9f085b0c580e8cdbc1dc9ee75",
+      "lastModificationDate": 1696548770807,
+      "contentHash": "fa0cab628ecb94e8c71eb2b68fe323d2",
       "sourceName": "src/Editions/Editions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2513,8 +2513,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/Beliefs.sol": {
-      "lastModificationDate": 1696546803512,
-      "contentHash": "22252117fbd9c6208a2896c1f42c4fc5",
+      "lastModificationDate": 1696548850215,
+      "contentHash": "35dfc8bf702ddf8daf20c000f002bde4",
       "sourceName": "src/Beliefs/Beliefs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2567,8 +2567,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/LibBeliefs.sol": {
-      "lastModificationDate": 1696546803512,
-      "contentHash": "6b3666bffd086c1a84c1db9644a45d3a",
+      "lastModificationDate": 1696548770807,
+      "contentHash": "384a64f8a0aea9c6fdbec0c797f85b9d",
       "sourceName": "src/Beliefs/LibBeliefs.sol",
       "solcConfig": {
         "version": "0.8.19",

@@ -10,14 +10,14 @@ import "../Editions/EditionsStructs.sol";
 import "./IBeliefs.sol";
 
 contract Beliefs is IBeliefs, Editions {
-    /// fee used for beliefs
-    uint256 public futureFundFee;
     // mapping of users to projects they believe in
     mapping(address user => BitMaps.BitMap beliefs) internal _beliefs;
     // array of users who have believed in some project
     address[] internal _believers;
     // mapping of users and their current balance
     mapping(address user => uint256 balance) public balances;
+    /// fee used for beliefs
+    uint256 public futureFundFee;
 
     function believeProject(uint256 editionId, string memory tags) external payable override {
         if (msg.value < futureFundFee) {
