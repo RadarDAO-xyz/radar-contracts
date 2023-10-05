@@ -12,6 +12,7 @@ import {Initializable} from "@openzeppelin/contracts-upgradeable/proxy/utils/Ini
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 import {EditionsRoles} from "./EditionsRoles.sol";
 import {IEditions} from "./IEditions.sol";
@@ -35,8 +36,7 @@ contract Editions is
 
     uint256 public maximumEditionFee;
 
-    // mapping of users to projects they believe in
-    mapping(address => BitMaps.BitMap) internal _beliefs;
+    mapping(address user => uint256 balance) public balances;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -91,13 +91,13 @@ contract Editions is
     }
 
     function getBalances(address owner) external view override returns (EditionsStructs.EditionIdWithAmount[] memory) {
-        EditionsStructs.EditionIdWithAmount[] memory balances = new EditionsStructs.EditionIdWithAmount[](
+        EditionsStructs.EditionIdWithAmount[] memory _balances = new EditionsStructs.EditionIdWithAmount[](
                 editionCounter
             );
         for (uint256 i = 0; i < editionCounter; i++) {
-            balances[i] = EditionsStructs.EditionIdWithAmount({id: editions[i].id, amount: balanceOf(owner, i)});
+            _balances[i] = EditionsStructs.EditionIdWithAmount({id: editions[i].id, amount: balanceOf(owner, i)});
         }
-        return balances;
+        return _balances;
     }
 
     /// admin methods
@@ -138,11 +138,29 @@ contract Editions is
         override
         onlyRole(DEFAULT_ADMIN_ROLE)
     {
-        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
+        if (editions[editionId].status == EditionsStructs.EditionStatus.NotCreated) {
             revert EditionNotCreated();
         }
         editions[editionId].id = id;
         editions[editionId].briefId = briefId;
+    }
+
+    function mintEdition(uint256 editionId, uint256 amount, address buyer, bytes memory data)
+        external
+        payable
+        override
+        onlyRole(DEFAULT_ADMIN_ROLE)
+    {
+        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
+            revert EditionNotLaunched();
+        }
+        if (msg.value < (editions[editionId].fee + protocolFee) * amount) {
+            revert NotEnoughFunds();
+        }
+
+        _mint(buyer, editionId, amount, data);
+
+        editions[editionId].balance += msg.value - amount * protocolFee;
     }
 
     /// edition owner methods
@@ -210,42 +228,6 @@ contract Editions is
         editions[editionId].status = EditionsStructs.EditionStatus.Launched;
 
         emit EditionResumed(editionId);
-    }
-
-    /// user methods
-
-    function mintEdition(uint256 editionId, uint256 amount, address buyer, bytes memory data)
-        external
-        payable
-        override
-    {
-        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
-            revert EditionNotLaunched();
-        }
-        if (msg.value < (editions[editionId].fee + protocolFee) * amount) {
-            revert NotEnoughFunds();
-        }
-
-        _mint(buyer, editionId, amount, data);
-
-        editions[editionId].balance += msg.value - amount * protocolFee;
-    }
-
-    function believeProject(uint256 editionId, string memory tags) external override {
-        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
-            revert EditionNotCreated();
-        }
-        BitMaps.set(_beliefs[msg.sender], editionId);
-        emit EditionBelieved(editionId, msg.sender, tags);
-    }
-
-    function removeBelief(uint256 editionId) external override {
-        BitMaps.BitMap storage beliefs = _beliefs[msg.sender];
-        if (!BitMaps.get(beliefs, editionId)) {
-            revert NotCorrectUser();
-        }
-        BitMaps.unset(beliefs, editionId);
-        emit EditionBeliefRemoved(editionId, msg.sender);
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyRole(EditionsRoles.UPGRADER_ROLE) {}

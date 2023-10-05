@@ -96,15 +96,15 @@
         },
         {
           "indexed": false,
-          "internalType": "string",
-          "name": "briefId",
-          "type": "string"
-        },
-        {
-          "indexed": false,
           "internalType": "uint256",
           "name": "fee",
           "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint96",
+          "name": "briefId",
+          "type": "uint96"
         },
         {
           "indexed": false,
@@ -191,14 +191,14 @@
           "type": "address"
         },
         {
-          "internalType": "string",
+          "internalType": "uint96",
           "name": "id",
-          "type": "string"
+          "type": "uint96"
         },
         {
-          "internalType": "string",
+          "internalType": "uint96",
           "name": "briefId",
-          "type": "string"
+          "type": "uint96"
         }
       ],
       "name": "createEdition",
@@ -225,9 +225,9 @@
         {
           "components": [
             {
-              "internalType": "string",
+              "internalType": "uint96",
               "name": "id",
-              "type": "string"
+              "type": "uint96"
             },
             {
               "internalType": "uint256",
@@ -270,14 +270,14 @@
               "type": "address"
             },
             {
-              "internalType": "string",
+              "internalType": "uint96",
               "name": "id",
-              "type": "string"
+              "type": "uint96"
             },
             {
-              "internalType": "string",
+              "internalType": "uint96",
               "name": "briefId",
-              "type": "string"
+              "type": "uint96"
             }
           ],
           "internalType": "struct EditionsStructs.Edition[]",
@@ -363,14 +363,14 @@
           "type": "uint256"
         },
         {
-          "internalType": "string",
+          "internalType": "uint96",
           "name": "id",
-          "type": "string"
+          "type": "uint96"
         },
         {
-          "internalType": "string",
+          "internalType": "uint96",
           "name": "briefId",
-          "type": "string"
+          "type": "uint96"
         }
       ],
       "name": "updateEdition",
