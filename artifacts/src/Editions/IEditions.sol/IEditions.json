@@ -45,66 +45,22 @@
       "anonymous": false,
       "inputs": [
         {
-          "indexed": true,
+          "indexed": false,
           "internalType": "uint256",
           "name": "editionId",
           "type": "uint256"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "believer",
-          "type": "address"
-        }
-      ],
-      "name": "EditionBeliefRemoved",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "uint256",
-          "name": "editionId",
-          "type": "uint256"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "believer",
-          "type": "address"
         },
         {
           "indexed": false,
           "internalType": "string",
-          "name": "tags",
+          "name": "briefId",
           "type": "string"
-        }
-      ],
-      "name": "EditionBelieved",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "editionId",
-          "type": "uint256"
         },
         {
           "indexed": false,
           "internalType": "uint256",
           "name": "fee",
           "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint96",
-          "name": "briefId",
-          "type": "uint96"
         },
         {
           "indexed": false,
@@ -159,24 +115,6 @@
       "inputs": [
         {
           "internalType": "uint256",
-          "name": "editionId",
-          "type": "uint256"
-        },
-        {
-          "internalType": "string",
-          "name": "tags",
-          "type": "string"
-        }
-      ],
-      "name": "believeProject",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
           "name": "fee",
           "type": "uint256"
         },
@@ -191,14 +129,14 @@
           "type": "address"
         },
         {
-          "internalType": "uint96",
+          "internalType": "string",
           "name": "id",
-          "type": "uint96"
+          "type": "string"
         },
         {
-          "internalType": "uint96",
+          "internalType": "string",
           "name": "briefId",
-          "type": "uint96"
+          "type": "string"
         }
       ],
       "name": "createEdition",
@@ -225,9 +163,9 @@
         {
           "components": [
             {
-              "internalType": "uint96",
+              "internalType": "string",
               "name": "id",
-              "type": "uint96"
+              "type": "string"
             },
             {
               "internalType": "uint256",
@@ -270,14 +208,14 @@
               "type": "address"
             },
             {
-              "internalType": "uint96",
+              "internalType": "string",
               "name": "id",
-              "type": "uint96"
+              "type": "string"
             },
             {
-              "internalType": "uint96",
+              "internalType": "string",
               "name": "briefId",
-              "type": "uint96"
+              "type": "string"
             }
           ],
           "internalType": "struct EditionsStructs.Edition[]",
@@ -324,19 +262,6 @@
           "type": "uint256"
         }
       ],
-      "name": "removeBelief",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "editionId",
-          "type": "uint256"
-        }
-      ],
       "name": "resumeEdition",
       "outputs": [],
       "stateMutability": "nonpayable",
@@ -363,14 +288,14 @@
           "type": "uint256"
         },
         {
-          "internalType": "uint96",
+          "internalType": "string",
           "name": "id",
-          "type": "uint96"
+          "type": "string"
         },
         {
-          "internalType": "uint96",
+          "internalType": "string",
           "name": "briefId",
-          "type": "uint96"
+          "type": "string"
         }
       ],
       "name": "updateEdition",

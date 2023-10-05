@@ -14,7 +14,7 @@ library LibBeliefs {
         uint256 editionCounter,
         mapping(uint256 => EditionsStructs.Edition) storage _editions,
         mapping(address => uint256) storage _balances
-    ) external {
+    ) internal {
         uint256 projectFee = totalValue / 2;
         uint256 poolFee = totalValue / 5;
 

@@ -36,8 +36,6 @@ contract Editions is
 
     uint256 public maximumEditionFee;
 
-    mapping(address user => uint256 balance) public balances;
-
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();

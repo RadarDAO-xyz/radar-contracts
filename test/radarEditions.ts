@@ -11,7 +11,14 @@ describe("RadarEditions", async function () {
   async function deployRadarEditionsFixture() {
     const [owner, addr1, addr2] = await ethers.getSigners();
 
-    const RadarEditions = await ethers.getContractFactory("RadarEditions");
+    const LibBeliefs = await ethers.getContractFactory("LibBeliefs");
+    const libBeliefs = await LibBeliefs.deploy();
+
+    const RadarEditions = await ethers.getContractFactory("RadarEditions", {
+      libraries: {
+        LibBeliefs: await libBeliefs.getAddress(),
+      },
+    });
     const instance = await upgrades.deployProxy(RadarEditions);
     await instance.waitForDeployment();
 

@@ -16,6 +16,8 @@ contract Beliefs is IBeliefs, Editions {
     mapping(address user => BitMaps.BitMap beliefs) internal _beliefs;
     // array of users who have believed in some project
     address[] internal _believers;
+    // mapping of users and their current balance
+    mapping(address user => uint256 balance) public balances;
 
     function believeProject(uint256 editionId, string memory tags) external payable override {
         if (msg.value < futureFundFee) {
