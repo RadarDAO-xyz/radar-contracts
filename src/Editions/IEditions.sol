@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import {IBeliefs} from "../Beliefs/IBeliefs.sol";
 import {EditionsStructs} from "./EditionsStructs.sol";
 import {EditionsRoles} from "./EditionsRoles.sol";
 
-interface IEditions is IBeliefs {
+interface IEditions {
     event EditionApproved(uint256 editionId);
     event EditionCreated(uint256 editionId, string briefId, uint256 fee, address owner);
     event EditionBalanceWithdrawn(uint256 editionId, uint256 amount, address owner);

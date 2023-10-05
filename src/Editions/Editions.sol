@@ -41,8 +41,6 @@ contract Editions is
     // array of users who have believed in some project
     address[] internal _believers;
 
-    uint256 public futureFundFee;
-
     mapping(address user => uint256 balance) public balances;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
@@ -235,67 +233,6 @@ contract Editions is
         editions[editionId].status = EditionsStructs.EditionStatus.Launched;
 
         emit EditionResumed(editionId);
-    }
-
-    /// user methods
-
-    function believeProject(uint256 editionId, string memory tags) external payable override {
-        if (msg.value < futureFundFee) {
-            revert NotEnoughFunds();
-        }
-        if (editions[editionId].status != EditionsStructs.EditionStatus.Launched) {
-            revert EditionNotLaunched();
-        }
-
-        uint256 projectFee = msg.value / 2;
-        uint256 poolFee = msg.value / 5;
-
-        /// distribute to project
-        editions[editionId].balance += projectFee;
-
-        /// distribute to other builders in pool
-        string memory briefId = editions[editionId].briefId;
-        address[] memory builders = new address[](editionCounter);
-        uint256 buildersCounter = 0;
-
-        uint256 i = 0;
-        for (; i < editionCounter && i != editionId; i++) {
-            EditionsStructs.Edition memory edition = editions[i];
-            if (Strings.equal(edition.briefId, briefId)) {
-                builders[buildersCounter] = edition.owner;
-                buildersCounter += 1;
-            }
-        }
-        if (builders.length > 0) {
-            uint256 amount = poolFee / buildersCounter;
-            for (i = 0; i < buildersCounter; i++) {
-                balances[builders[i]] += amount;
-            }
-        }
-
-        /// update belief data
-        bool believerExists = false;
-        for (i = 0; i < _believers.length; i++) {
-            if (_believers[i] == msg.sender) {
-                believerExists = _believers[i] == msg.sender;
-                break;
-            }
-        }
-        if (!believerExists) {
-            _believers.push(msg.sender);
-        }
-        BitMaps.set(_beliefs[msg.sender], editionId);
-
-        emit EditionBelieved(editionId, msg.sender, tags);
-    }
-
-    function removeBelief(uint256 editionId) external override {
-        BitMaps.BitMap storage beliefs = _beliefs[msg.sender];
-        if (!BitMaps.get(beliefs, editionId)) {
-            revert NotCorrectUser();
-        }
-        BitMaps.unset(beliefs, editionId);
-        emit EditionBeliefRemoved(editionId, msg.sender);
     }
 
     function _authorizeUpgrade(address newImplementation) internal override onlyRole(EditionsRoles.UPGRADER_ROLE) {}
