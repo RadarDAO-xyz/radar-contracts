@@ -5,12 +5,17 @@ import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
 import {Editions} from "../Editions/Editions.sol";
+import {LibBeliefs} from "./LibBeliefs.sol";
 import "../Editions/EditionsStructs.sol";
 import "./IBeliefs.sol";
 
 contract Beliefs is IBeliefs, Editions {
     /// fee used for beliefs
     uint256 public futureFundFee;
+    // mapping of users to projects they believe in
+    mapping(address user => BitMaps.BitMap beliefs) internal _beliefs;
+    // array of users who have believed in some project
+    address[] internal _believers;
 
     /// user methods
 
@@ -22,35 +27,11 @@ contract Beliefs is IBeliefs, Editions {
             revert EditionNotLaunched();
         }
 
-        uint256 projectFee = msg.value / 2;
-        uint256 poolFee = msg.value / 5;
-
-        /// distribute to project
-        editions[editionId].balance += projectFee;
-
-        /// distribute to other builders in pool
-        string memory briefId = editions[editionId].briefId;
-        address[] memory builders = new address[](editionCounter);
-        uint256 buildersCounter = 0;
-
-        uint256 i = 0;
-        for (; i < editionCounter && i != editionId; i++) {
-            EditionsStructs.Edition memory edition = editions[i];
-            if (Strings.equal(edition.briefId, briefId)) {
-                builders[buildersCounter] = edition.owner;
-                buildersCounter += 1;
-            }
-        }
-        if (builders.length > 0) {
-            uint256 amount = poolFee / buildersCounter;
-            for (i = 0; i < buildersCounter; i++) {
-                balances[builders[i]] += amount;
-            }
-        }
+        LibBeliefs.distributeFees(msg.value, editionId, editionCounter, editions, balances);
 
         /// update belief data
         bool believerExists = false;
-        for (i = 0; i < _believers.length; i++) {
+        for (uint256 i = 0; i < _believers.length; i++) {
             if (_believers[i] == msg.sender) {
                 believerExists = _believers[i] == msg.sender;
                 break;

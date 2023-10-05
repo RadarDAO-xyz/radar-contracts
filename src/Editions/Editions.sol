@@ -36,11 +36,6 @@ contract Editions is
 
     uint256 public maximumEditionFee;
 
-    // mapping of users to projects they believe in
-    mapping(address user => BitMaps.BitMap beliefs) internal _beliefs;
-    // array of users who have believed in some project
-    address[] internal _believers;
-
     mapping(address user => uint256 balance) public balances;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
@@ -96,13 +91,13 @@ contract Editions is
     }
 
     function getBalances(address owner) external view override returns (EditionsStructs.EditionIdWithAmount[] memory) {
-        EditionsStructs.EditionIdWithAmount[] memory balances = new EditionsStructs.EditionIdWithAmount[](
+        EditionsStructs.EditionIdWithAmount[] memory _balances = new EditionsStructs.EditionIdWithAmount[](
                 editionCounter
             );
         for (uint256 i = 0; i < editionCounter; i++) {
-            balances[i] = EditionsStructs.EditionIdWithAmount({id: editions[i].id, amount: balanceOf(owner, i)});
+            _balances[i] = EditionsStructs.EditionIdWithAmount({id: editions[i].id, amount: balanceOf(owner, i)});
         }
-        return balances;
+        return _balances;
     }
 
     /// admin methods
