@@ -20,8 +20,6 @@ interface IEditions {
 
     function approveEdition(uint256 editionId) external;
 
-    function withdrawFunds(uint256 amount) external;
-
     function updateEdition(uint256 editionId, string memory id, string memory briefId) external;
 
     /// edition owner methods

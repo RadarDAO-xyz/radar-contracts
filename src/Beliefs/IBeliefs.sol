@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
+
 /// @title Interface for belief related methods
 /// @author marcuspang.eth
 /// @notice Explain to an end user what this does
@@ -19,4 +21,8 @@ interface IBeliefs {
     /// @dev Funds are not re-distributed back to the user
     /// @param editionId The specified edition to remove belief from
     function removeBelief(uint256 editionId) external;
+
+    function getUserBeliefs(address user) external view returns (bool[] memory beliefs);
+
+    function retrieveBalance(uint256 amount) external;
 }

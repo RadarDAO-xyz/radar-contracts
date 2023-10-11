@@ -1,34 +1,18 @@
 import { expect } from "chai";
-import { ethers, upgrades } from "hardhat";
+import { ethers } from "hardhat";
+import { deployRadarEditionsFixture } from "./fixtures";
 
-describe("RadarEditions", async function () {
+describe("Editions", async function () {
   const protocolFee = 10000;
   const maximumEditionFee = 1000000;
   const fee = 2;
   const id = "some-id";
   const briefId = "some-brief-id";
 
-  async function deployRadarEditionsFixture() {
-    const [owner, addr1, addr2] = await ethers.getSigners();
-
-    const LibBeliefs = await ethers.getContractFactory("LibBeliefs");
-    const libBeliefs = await LibBeliefs.deploy();
-
-    const RadarEditions = await ethers.getContractFactory("RadarEditions", {
-      libraries: {
-        LibBeliefs: await libBeliefs.getAddress(),
-      },
-    });
-    const instance = await upgrades.deployProxy(RadarEditions);
-    await instance.waitForDeployment();
-
-    return { instance, owner, addr1, addr2 };
-  }
-
   it("should set protocol and edition fees successfully", async function () {
     const { instance } = await deployRadarEditionsFixture();
-    await instance.setProtocolFee(protocolFee);
 
+    await instance.setProtocolFee(protocolFee);
     await instance.setMaximumEditionFee(maximumEditionFee);
 
     expect(await instance.protocolFee()).to.equal(protocolFee);
@@ -37,7 +21,8 @@ describe("RadarEditions", async function () {
 
   it("should mint successfully", async function () {
     const mintAmount = 5;
-    const { owner, instance } = await deployRadarEditionsFixture();
+    const { signers, instance } = await deployRadarEditionsFixture();
+    const owner = signers[0];
 
     await instance.setProtocolFee(protocolFee);
     await instance.setMaximumEditionFee(maximumEditionFee);
@@ -67,4 +52,6 @@ describe("RadarEditions", async function () {
     );
     expect(contractBalance).to.equal((fee + protocolFee) * mintAmount);
   });
+
+  describe("believe", () => {});
 });

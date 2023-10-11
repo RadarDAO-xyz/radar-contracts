@@ -19,6 +19,16 @@ contract Beliefs is IBeliefs, Editions {
     /// fee used for beliefs
     uint256 public futureFundFee;
 
+    /// view methods
+    function getUserBeliefs(address user) external view override returns (bool[] memory) {
+        bool[] memory beliefs = new bool[](editionCounter);
+        for (uint256 i = 0; i < editionCounter; i++) {
+            beliefs[i] = BitMaps.get(_beliefs[user], i);
+        }
+        return beliefs;
+    }
+
+    /// user methods
     function believeProject(uint256 editionId, string memory tags) external payable override {
         if (msg.value < futureFundFee) {
             revert NotEnoughFunds();
@@ -33,7 +43,7 @@ contract Beliefs is IBeliefs, Editions {
         bool believerExists = false;
         for (uint256 i = 0; i < _believers.length; i++) {
             if (_believers[i] == msg.sender) {
-                believerExists = _believers[i] == msg.sender;
+                believerExists = true;
                 break;
             }
         }
@@ -52,5 +62,18 @@ contract Beliefs is IBeliefs, Editions {
         }
         BitMaps.unset(beliefs, editionId);
         emit EditionBeliefRemoved(editionId, msg.sender);
+    }
+
+    function retrieveBalance(uint256 amount) external override {
+        uint256 balance = balances[msg.sender];
+        if (amount > balance) {
+            revert NotEnoughFunds();
+        }
+
+        balances[msg.sender] -= amount;
+        (bool sent,) = msg.sender.call{value: amount}("");
+        if (!sent) {
+            revert TransactionFailed();
+        }
     }
 }

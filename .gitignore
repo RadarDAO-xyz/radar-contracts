@@ -18,4 +18,3 @@ artifacts/build-info/
 artifacts/lib/
 
 node_modules
-typechain-types

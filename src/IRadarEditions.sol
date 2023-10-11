@@ -14,4 +14,6 @@ interface IRadarEditions {
     function setMaximumEditionFee(uint256 _maximumEditionFee) external;
 
     function setFutureFundFee(uint256 _futureFundFee) external;
+
+    function withdrawFunds(uint256 amount) external;
 }

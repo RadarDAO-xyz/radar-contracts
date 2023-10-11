@@ -27,14 +27,17 @@ library LibBeliefs {
         uint256 buildersCounter = 0;
 
         uint256 i = 0;
-        for (; i < editionCounter && i != editionId; i++) {
+        for (; i < editionCounter; i++) {
+            if (i == editionId) {
+                continue;
+            }
             EditionsStructs.Edition memory edition = _editions[i];
             if (Strings.equal(edition.briefId, briefId)) {
                 builders[buildersCounter] = edition.owner;
                 buildersCounter += 1;
             }
         }
-        if (builders.length > 0) {
+        if (buildersCounter > 0) {
             uint256 amount = poolFee / buildersCounter;
             for (i = 0; i < buildersCounter; i++) {
                 _balances[builders[i]] += amount;

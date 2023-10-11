@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarEditions.sol": {
-      "lastModificationDate": 1696548850214,
-      "contentHash": "e94707aa4b40aae6aa974599a7a35dad",
+      "lastModificationDate": 1697050409274,
+      "contentHash": "3809db3be95b1c5b4ed824b97c0e600d",
       "sourceName": "src/RadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -44,7 +44,8 @@
         "@openzeppelin/contracts/utils/Strings.sol",
         "./Beliefs/Beliefs.sol",
         "./Editions/EditionsRoles.sol",
-        "./IRadarEditions.sol"
+        "./IRadarEditions.sol",
+        "./Editions/EditionsStructs.sol"
       ],
       "versionPragmas": [
         "^0.8.13"
@@ -54,8 +55,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/IRadarEditions.sol": {
-      "lastModificationDate": 1696547017273,
-      "contentHash": "964e1f5bbdc0abe91d9a46246207b9c7",
+      "lastModificationDate": 1697050409272,
+      "contentHash": "81eab0fae60eeceb2d83a69a9af240b3",
       "sourceName": "src/IRadarEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2262,8 +2263,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/Editions.sol": {
-      "lastModificationDate": 1696548770807,
-      "contentHash": "fa0cab628ecb94e8c71eb2b68fe323d2",
+      "lastModificationDate": 1697050178343,
+      "contentHash": "9a2e74a4b4ce12ad15978fb723d82835",
       "sourceName": "src/Editions/Editions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2322,8 +2323,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Editions/IEditions.sol": {
-      "lastModificationDate": 1696546803511,
-      "contentHash": "5c672ad354e5c01a202ff4d600e4dfae",
+      "lastModificationDate": 1697050178341,
+      "contentHash": "fabada6d3e3e84a7629a54d6f4354dcb",
       "sourceName": "src/Editions/IEditions.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2466,8 +2467,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/IBeliefs.sol": {
-      "lastModificationDate": 1696546803512,
-      "contentHash": "d33d1d059cfbe47bb63e139ec6bd2374",
+      "lastModificationDate": 1697050418677,
+      "contentHash": "cbcb458399d5928d96bafd2579869e7e",
       "sourceName": "src/Beliefs/IBeliefs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2504,7 +2505,9 @@
           ]
         }
       },
-      "imports": [],
+      "imports": [
+        "@openzeppelin/contracts/utils/structs/BitMaps.sol"
+      ],
       "versionPragmas": [
         "^0.8.13"
       ],
@@ -2513,8 +2516,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/Beliefs.sol": {
-      "lastModificationDate": 1696548850215,
-      "contentHash": "35dfc8bf702ddf8daf20c000f002bde4",
+      "lastModificationDate": 1697050409274,
+      "contentHash": "e0b93110daaf9cb73d6dea91db9453e4",
       "sourceName": "src/Beliefs/Beliefs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2567,8 +2570,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/Beliefs/LibBeliefs.sol": {
-      "lastModificationDate": 1696548770807,
-      "contentHash": "384a64f8a0aea9c6fdbec0c797f85b9d",
+      "lastModificationDate": 1697050409274,
+      "contentHash": "f7316b4cd577ae0b3844ab8199f2be6a",
       "sourceName": "src/Beliefs/LibBeliefs.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -2616,6 +2619,53 @@
       ],
       "artifacts": [
         "LibBeliefs"
+      ]
+    },
+    "/Users/marcuspang/Desktop/Personal/radar-contracts/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1696085146650,
+      "contentHash": "e2884fb4e1ef4b4a7c7ac3a227880b0f",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "remappings": [
+            "ds-test/=lib/forge-std/lib/ds-test/src/",
+            "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+            "forge-std/=lib/forge-std/src/",
+            "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+            "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+            "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+            "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+            "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+            "openzeppelin/=lib/openzeppelin-contracts-upgradeable/contracts/"
+          ]
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">= 0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
       ]
     }
   }
