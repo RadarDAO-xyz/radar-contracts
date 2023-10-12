@@ -1875,8 +1875,8 @@
       ]
     },
     "/Users/marcuspang/Desktop/Personal/radar-contracts/src/RadarVideoNFT.sol": {
-      "lastModificationDate": 1696085254386,
-      "contentHash": "379781782ef8b318cd055540743f6b6b",
+      "lastModificationDate": 1697133969017,
+      "contentHash": "c9f9e866c5a055a6bf61fc15322b2965",
       "sourceName": "src/RadarVideoNFT.sol",
       "solcConfig": {
         "version": "0.8.19",

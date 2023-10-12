@@ -43,6 +43,10 @@ contract RadarVideoNFT is
         return tokenId;
     }
 
+    function setTokenURI(uint256 tokenId, string memory tokenUri) public onlyOwner {
+        _setTokenURI(tokenId, tokenUri);
+    }
+
     function uri(uint256 tokenId) public view returns (string memory) {
         return tokenURI(tokenId);
     }
