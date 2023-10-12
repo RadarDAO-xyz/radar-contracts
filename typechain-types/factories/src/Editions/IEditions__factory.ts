@@ -53,6 +53,25 @@ const _abi = [
       {
         indexed: false,
         internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+    ],
+    name: "EditionBalanceWithdrawnFromAll",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "uint256",
         name: "editionId",
         type: "uint256",
       },
@@ -323,6 +342,13 @@ const _abi = [
       },
     ],
     name: "withdrawEditionBalance",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "withdrawFromAllEditionBalance",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

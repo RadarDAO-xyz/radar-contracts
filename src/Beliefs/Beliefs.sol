@@ -75,5 +75,6 @@ contract Beliefs is IBeliefs, Editions {
         if (!sent) {
             revert TransactionFailed();
         }
+        emit BalanceRetrieved(msg.sender, amount);
     }
 }

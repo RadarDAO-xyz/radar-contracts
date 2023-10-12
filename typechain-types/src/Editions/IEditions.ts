@@ -69,12 +69,14 @@ export interface IEditionsInterface extends Interface {
       | "stopEdition"
       | "updateEdition"
       | "withdrawEditionBalance"
+      | "withdrawFromAllEditionBalance"
   ): FunctionFragment;
 
   getEvent(
     nameOrSignatureOrTopic:
       | "EditionApproved"
       | "EditionBalanceWithdrawn"
+      | "EditionBalanceWithdrawnFromAll"
       | "EditionCreated"
       | "EditionResumed"
       | "EditionStopped"
@@ -116,6 +118,10 @@ export interface IEditionsInterface extends Interface {
     functionFragment: "withdrawEditionBalance",
     values: [BigNumberish, BigNumberish]
   ): string;
+  encodeFunctionData(
+    functionFragment: "withdrawFromAllEditionBalance",
+    values?: undefined
+  ): string;
 
   decodeFunctionResult(
     functionFragment: "approveEdition",
@@ -153,6 +159,10 @@ export interface IEditionsInterface extends Interface {
     functionFragment: "withdrawEditionBalance",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawFromAllEditionBalance",
+    data: BytesLike
+  ): Result;
 }
 
 export namespace EditionApprovedEvent {
@@ -176,6 +186,19 @@ export namespace EditionBalanceWithdrawnEvent {
   export type OutputTuple = [editionId: bigint, amount: bigint, owner: string];
   export interface OutputObject {
     editionId: bigint;
+    amount: bigint;
+    owner: string;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
+export namespace EditionBalanceWithdrawnFromAllEvent {
+  export type InputTuple = [amount: BigNumberish, owner: AddressLike];
+  export type OutputTuple = [amount: bigint, owner: string];
+  export interface OutputObject {
     amount: bigint;
     owner: string;
   }
@@ -342,6 +365,8 @@ export interface IEditions extends BaseContract {
     "nonpayable"
   >;
 
+  withdrawFromAllEditionBalance: TypedContractMethod<[], [void], "nonpayable">;
+
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
   ): T;
@@ -404,6 +429,9 @@ export interface IEditions extends BaseContract {
     [void],
     "nonpayable"
   >;
+  getFunction(
+    nameOrSignature: "withdrawFromAllEditionBalance"
+  ): TypedContractMethod<[], [void], "nonpayable">;
 
   getEvent(
     key: "EditionApproved"
@@ -418,6 +446,13 @@ export interface IEditions extends BaseContract {
     EditionBalanceWithdrawnEvent.InputTuple,
     EditionBalanceWithdrawnEvent.OutputTuple,
     EditionBalanceWithdrawnEvent.OutputObject
+  >;
+  getEvent(
+    key: "EditionBalanceWithdrawnFromAll"
+  ): TypedContractEvent<
+    EditionBalanceWithdrawnFromAllEvent.InputTuple,
+    EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+    EditionBalanceWithdrawnFromAllEvent.OutputObject
   >;
   getEvent(
     key: "EditionCreated"
@@ -462,6 +497,17 @@ export interface IEditions extends BaseContract {
       EditionBalanceWithdrawnEvent.InputTuple,
       EditionBalanceWithdrawnEvent.OutputTuple,
       EditionBalanceWithdrawnEvent.OutputObject
+    >;
+
+    "EditionBalanceWithdrawnFromAll(uint256,address)": TypedContractEvent<
+      EditionBalanceWithdrawnFromAllEvent.InputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputObject
+    >;
+    EditionBalanceWithdrawnFromAll: TypedContractEvent<
+      EditionBalanceWithdrawnFromAllEvent.InputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputObject
     >;
 
     "EditionCreated(uint256,string,uint256,address)": TypedContractEvent<

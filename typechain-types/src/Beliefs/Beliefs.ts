@@ -104,15 +104,18 @@ export interface BeliefsInterface extends Interface {
       | "upgradeToAndCall"
       | "uri"
       | "withdrawEditionBalance"
+      | "withdrawFromAllEditionBalance"
   ): FunctionFragment;
 
   getEvent(
     nameOrSignatureOrTopic:
       | "AdminChanged"
       | "ApprovalForAll"
+      | "BalanceRetrieved"
       | "BeaconUpgraded"
       | "EditionApproved"
       | "EditionBalanceWithdrawn"
+      | "EditionBalanceWithdrawnFromAll"
       | "EditionBeliefRemoved"
       | "EditionBelieved"
       | "EditionCreated"
@@ -300,6 +303,10 @@ export interface BeliefsInterface extends Interface {
     functionFragment: "withdrawEditionBalance",
     values: [BigNumberish, BigNumberish]
   ): string;
+  encodeFunctionData(
+    functionFragment: "withdrawFromAllEditionBalance",
+    values?: undefined
+  ): string;
 
   decodeFunctionResult(
     functionFragment: "DEFAULT_ADMIN_ROLE",
@@ -432,6 +439,10 @@ export interface BeliefsInterface extends Interface {
     functionFragment: "withdrawEditionBalance",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(
+    functionFragment: "withdrawFromAllEditionBalance",
+    data: BytesLike
+  ): Result;
 }
 
 export namespace AdminChangedEvent {
@@ -462,6 +473,19 @@ export namespace ApprovalForAllEvent {
     account: string;
     operator: string;
     approved: boolean;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
+export namespace BalanceRetrievedEvent {
+  export type InputTuple = [user: AddressLike, amount: BigNumberish];
+  export type OutputTuple = [user: string, amount: bigint];
+  export interface OutputObject {
+    user: string;
+    amount: bigint;
   }
   export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
   export type Filter = TypedDeferredTopicFilter<Event>;
@@ -502,6 +526,19 @@ export namespace EditionBalanceWithdrawnEvent {
   export type OutputTuple = [editionId: bigint, amount: bigint, owner: string];
   export interface OutputObject {
     editionId: bigint;
+    amount: bigint;
+    owner: string;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
+export namespace EditionBalanceWithdrawnFromAllEvent {
+  export type InputTuple = [amount: BigNumberish, owner: AddressLike];
+  export type OutputTuple = [amount: bigint, owner: string];
+  export interface OutputObject {
     amount: bigint;
     owner: string;
   }
@@ -1041,6 +1078,8 @@ export interface Beliefs extends BaseContract {
     "nonpayable"
   >;
 
+  withdrawFromAllEditionBalance: TypedContractMethod<[], [void], "nonpayable">;
+
   getFunction<T extends ContractMethod = ContractMethod>(
     key: string | FunctionFragment
   ): T;
@@ -1293,6 +1332,9 @@ export interface Beliefs extends BaseContract {
     [void],
     "nonpayable"
   >;
+  getFunction(
+    nameOrSignature: "withdrawFromAllEditionBalance"
+  ): TypedContractMethod<[], [void], "nonpayable">;
 
   getEvent(
     key: "AdminChanged"
@@ -1307,6 +1349,13 @@ export interface Beliefs extends BaseContract {
     ApprovalForAllEvent.InputTuple,
     ApprovalForAllEvent.OutputTuple,
     ApprovalForAllEvent.OutputObject
+  >;
+  getEvent(
+    key: "BalanceRetrieved"
+  ): TypedContractEvent<
+    BalanceRetrievedEvent.InputTuple,
+    BalanceRetrievedEvent.OutputTuple,
+    BalanceRetrievedEvent.OutputObject
   >;
   getEvent(
     key: "BeaconUpgraded"
@@ -1328,6 +1377,13 @@ export interface Beliefs extends BaseContract {
     EditionBalanceWithdrawnEvent.InputTuple,
     EditionBalanceWithdrawnEvent.OutputTuple,
     EditionBalanceWithdrawnEvent.OutputObject
+  >;
+  getEvent(
+    key: "EditionBalanceWithdrawnFromAll"
+  ): TypedContractEvent<
+    EditionBalanceWithdrawnFromAllEvent.InputTuple,
+    EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+    EditionBalanceWithdrawnFromAllEvent.OutputObject
   >;
   getEvent(
     key: "EditionBeliefRemoved"
@@ -1458,6 +1514,17 @@ export interface Beliefs extends BaseContract {
       ApprovalForAllEvent.OutputObject
     >;
 
+    "BalanceRetrieved(address,uint256)": TypedContractEvent<
+      BalanceRetrievedEvent.InputTuple,
+      BalanceRetrievedEvent.OutputTuple,
+      BalanceRetrievedEvent.OutputObject
+    >;
+    BalanceRetrieved: TypedContractEvent<
+      BalanceRetrievedEvent.InputTuple,
+      BalanceRetrievedEvent.OutputTuple,
+      BalanceRetrievedEvent.OutputObject
+    >;
+
     "BeaconUpgraded(address)": TypedContractEvent<
       BeaconUpgradedEvent.InputTuple,
       BeaconUpgradedEvent.OutputTuple,
@@ -1489,6 +1556,17 @@ export interface Beliefs extends BaseContract {
       EditionBalanceWithdrawnEvent.InputTuple,
       EditionBalanceWithdrawnEvent.OutputTuple,
       EditionBalanceWithdrawnEvent.OutputObject
+    >;
+
+    "EditionBalanceWithdrawnFromAll(uint256,address)": TypedContractEvent<
+      EditionBalanceWithdrawnFromAllEvent.InputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputObject
+    >;
+    EditionBalanceWithdrawnFromAll: TypedContractEvent<
+      EditionBalanceWithdrawnFromAllEvent.InputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputObject
     >;
 
     "EditionBeliefRemoved(uint256,address)": TypedContractEvent<

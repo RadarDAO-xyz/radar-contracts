@@ -184,6 +184,26 @@ contract Editions is
         emit EditionBalanceWithdrawn(editionId, amount, msg.sender);
     }
 
+    function withdrawFromAllEditionBalance() external override {
+        uint256 totalBalance = 0;
+        for (uint256 i = 0; i < editionCounter; i++) {
+            if (editions[i].owner == msg.sender) {
+                totalBalance += editions[i].balance;
+                editions[i].balance = 0;
+            }
+        }
+        if (totalBalance == 0) {
+            revert EditionNotEnoughBalance();
+        }
+
+        (bool sent,) = msg.sender.call{value: totalBalance}("");
+        if (!sent) {
+            revert TransactionFailed();
+        }
+
+        emit EditionBalanceWithdrawnFromAll(totalBalance, msg.sender);
+    }
+
     function stopEdition(uint256 editionId) external override {
         if (!(editions[editionId].owner == msg.sender || hasRole(DEFAULT_ADMIN_ROLE, msg.sender))) {
             revert NotEditionOwner();

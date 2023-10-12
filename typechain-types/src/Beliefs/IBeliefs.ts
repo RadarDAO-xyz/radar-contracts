@@ -33,7 +33,10 @@ export interface IBeliefsInterface extends Interface {
   ): FunctionFragment;
 
   getEvent(
-    nameOrSignatureOrTopic: "EditionBeliefRemoved" | "EditionBelieved"
+    nameOrSignatureOrTopic:
+      | "BalanceRetrieved"
+      | "EditionBeliefRemoved"
+      | "EditionBelieved"
   ): EventFragment;
 
   encodeFunctionData(
@@ -69,6 +72,19 @@ export interface IBeliefsInterface extends Interface {
     functionFragment: "retrieveBalance",
     data: BytesLike
   ): Result;
+}
+
+export namespace BalanceRetrievedEvent {
+  export type InputTuple = [user: AddressLike, amount: BigNumberish];
+  export type OutputTuple = [user: string, amount: bigint];
+  export interface OutputObject {
+    user: string;
+    amount: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
 
 export namespace EditionBeliefRemovedEvent {
@@ -187,6 +203,13 @@ export interface IBeliefs extends BaseContract {
   ): TypedContractMethod<[amount: BigNumberish], [void], "nonpayable">;
 
   getEvent(
+    key: "BalanceRetrieved"
+  ): TypedContractEvent<
+    BalanceRetrievedEvent.InputTuple,
+    BalanceRetrievedEvent.OutputTuple,
+    BalanceRetrievedEvent.OutputObject
+  >;
+  getEvent(
     key: "EditionBeliefRemoved"
   ): TypedContractEvent<
     EditionBeliefRemovedEvent.InputTuple,
@@ -202,6 +225,17 @@ export interface IBeliefs extends BaseContract {
   >;
 
   filters: {
+    "BalanceRetrieved(address,uint256)": TypedContractEvent<
+      BalanceRetrievedEvent.InputTuple,
+      BalanceRetrievedEvent.OutputTuple,
+      BalanceRetrievedEvent.OutputObject
+    >;
+    BalanceRetrieved: TypedContractEvent<
+      BalanceRetrievedEvent.InputTuple,
+      BalanceRetrievedEvent.OutputTuple,
+      BalanceRetrievedEvent.OutputObject
+    >;
+
     "EditionBeliefRemoved(uint256,address)": TypedContractEvent<
       EditionBeliefRemovedEvent.InputTuple,
       EditionBeliefRemovedEvent.OutputTuple,

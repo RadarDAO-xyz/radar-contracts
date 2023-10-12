@@ -10,6 +10,7 @@ interface IEditions {
     event EditionBalanceWithdrawn(uint256 editionId, uint256 amount, address owner);
     event EditionStopped(uint256 editionId);
     event EditionResumed(uint256 editionId);
+    event EditionBalanceWithdrawnFromAll(uint256 amount, address owner);
 
     /// view methods
     function getEditions() external view returns (EditionsStructs.Edition[] memory);
@@ -29,6 +30,8 @@ interface IEditions {
         returns (uint256 editionId);
 
     function withdrawEditionBalance(uint256 editionId, uint256 amount) external;
+
+    function withdrawFromAllEditionBalance() external;
 
     function stopEdition(uint256 editionId) external;
 

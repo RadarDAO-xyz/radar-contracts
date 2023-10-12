@@ -10,6 +10,7 @@ import {BitMaps} from "@openzeppelin/contracts/utils/structs/BitMaps.sol";
 interface IBeliefs {
     event EditionBelieved(uint256 indexed editionId, address indexed believer, string tags);
     event EditionBeliefRemoved(uint256 indexed editionId, address indexed believer);
+    event BalanceRetrieved(address indexed user, uint256 amount);
 
     /// @notice Believe in a project and distribute funds to the project and other projects in the same pool
     /// @dev Remaining fees are distributed to RADAR

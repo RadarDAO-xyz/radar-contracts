@@ -109,6 +109,7 @@ export interface RadarEditionsInterface extends Interface {
       | "upgradeToAndCall"
       | "uri"
       | "withdrawEditionBalance"
+      | "withdrawFromAllEditionBalance"
       | "withdrawFunds"
   ): FunctionFragment;
 
@@ -116,9 +117,11 @@ export interface RadarEditionsInterface extends Interface {
     nameOrSignatureOrTopic:
       | "AdminChanged"
       | "ApprovalForAll"
+      | "BalanceRetrieved"
       | "BeaconUpgraded"
       | "EditionApproved"
       | "EditionBalanceWithdrawn"
+      | "EditionBalanceWithdrawnFromAll"
       | "EditionBeliefRemoved"
       | "EditionBelieved"
       | "EditionCreated"
@@ -324,6 +327,10 @@ export interface RadarEditionsInterface extends Interface {
     values: [BigNumberish, BigNumberish]
   ): string;
   encodeFunctionData(
+    functionFragment: "withdrawFromAllEditionBalance",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
     functionFragment: "withdrawFunds",
     values: [BigNumberish]
   ): string;
@@ -477,6 +484,10 @@ export interface RadarEditionsInterface extends Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(
+    functionFragment: "withdrawFromAllEditionBalance",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "withdrawFunds",
     data: BytesLike
   ): Result;
@@ -517,6 +528,19 @@ export namespace ApprovalForAllEvent {
   export type LogDescription = TypedLogDescription<Event>;
 }
 
+export namespace BalanceRetrievedEvent {
+  export type InputTuple = [user: AddressLike, amount: BigNumberish];
+  export type OutputTuple = [user: string, amount: bigint];
+  export interface OutputObject {
+    user: string;
+    amount: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
 export namespace BeaconUpgradedEvent {
   export type InputTuple = [beacon: AddressLike];
   export type OutputTuple = [beacon: string];
@@ -550,6 +574,19 @@ export namespace EditionBalanceWithdrawnEvent {
   export type OutputTuple = [editionId: bigint, amount: bigint, owner: string];
   export interface OutputObject {
     editionId: bigint;
+    amount: bigint;
+    owner: string;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
+
+export namespace EditionBalanceWithdrawnFromAllEvent {
+  export type InputTuple = [amount: BigNumberish, owner: AddressLike];
+  export type OutputTuple = [amount: bigint, owner: string];
+  export interface OutputObject {
     amount: bigint;
     owner: string;
   }
@@ -1111,6 +1148,8 @@ export interface RadarEditions extends BaseContract {
     "nonpayable"
   >;
 
+  withdrawFromAllEditionBalance: TypedContractMethod<[], [void], "nonpayable">;
+
   withdrawFunds: TypedContractMethod<
     [amount: BigNumberish],
     [void],
@@ -1389,6 +1428,9 @@ export interface RadarEditions extends BaseContract {
     "nonpayable"
   >;
   getFunction(
+    nameOrSignature: "withdrawFromAllEditionBalance"
+  ): TypedContractMethod<[], [void], "nonpayable">;
+  getFunction(
     nameOrSignature: "withdrawFunds"
   ): TypedContractMethod<[amount: BigNumberish], [void], "nonpayable">;
 
@@ -1405,6 +1447,13 @@ export interface RadarEditions extends BaseContract {
     ApprovalForAllEvent.InputTuple,
     ApprovalForAllEvent.OutputTuple,
     ApprovalForAllEvent.OutputObject
+  >;
+  getEvent(
+    key: "BalanceRetrieved"
+  ): TypedContractEvent<
+    BalanceRetrievedEvent.InputTuple,
+    BalanceRetrievedEvent.OutputTuple,
+    BalanceRetrievedEvent.OutputObject
   >;
   getEvent(
     key: "BeaconUpgraded"
@@ -1426,6 +1475,13 @@ export interface RadarEditions extends BaseContract {
     EditionBalanceWithdrawnEvent.InputTuple,
     EditionBalanceWithdrawnEvent.OutputTuple,
     EditionBalanceWithdrawnEvent.OutputObject
+  >;
+  getEvent(
+    key: "EditionBalanceWithdrawnFromAll"
+  ): TypedContractEvent<
+    EditionBalanceWithdrawnFromAllEvent.InputTuple,
+    EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+    EditionBalanceWithdrawnFromAllEvent.OutputObject
   >;
   getEvent(
     key: "EditionBeliefRemoved"
@@ -1556,6 +1612,17 @@ export interface RadarEditions extends BaseContract {
       ApprovalForAllEvent.OutputObject
     >;
 
+    "BalanceRetrieved(address,uint256)": TypedContractEvent<
+      BalanceRetrievedEvent.InputTuple,
+      BalanceRetrievedEvent.OutputTuple,
+      BalanceRetrievedEvent.OutputObject
+    >;
+    BalanceRetrieved: TypedContractEvent<
+      BalanceRetrievedEvent.InputTuple,
+      BalanceRetrievedEvent.OutputTuple,
+      BalanceRetrievedEvent.OutputObject
+    >;
+
     "BeaconUpgraded(address)": TypedContractEvent<
       BeaconUpgradedEvent.InputTuple,
       BeaconUpgradedEvent.OutputTuple,
@@ -1587,6 +1654,17 @@ export interface RadarEditions extends BaseContract {
       EditionBalanceWithdrawnEvent.InputTuple,
       EditionBalanceWithdrawnEvent.OutputTuple,
       EditionBalanceWithdrawnEvent.OutputObject
+    >;
+
+    "EditionBalanceWithdrawnFromAll(uint256,address)": TypedContractEvent<
+      EditionBalanceWithdrawnFromAllEvent.InputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputObject
+    >;
+    EditionBalanceWithdrawnFromAll: TypedContractEvent<
+      EditionBalanceWithdrawnFromAllEvent.InputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputTuple,
+      EditionBalanceWithdrawnFromAllEvent.OutputObject
     >;
 
     "EditionBeliefRemoved(uint256,address)": TypedContractEvent<
