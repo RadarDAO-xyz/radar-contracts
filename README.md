@@ -8,7 +8,8 @@
   2. the project mint fee
   3. total balance
 - There is also a globally defined max mint fee (called protocol fee), that all project mint fees cannot exceed
-
+- The `RadarVideoNFT` contract is tied to the `RadarEditions` contract, which is used to store the video metadata
+  - The ID for each video in `RadarVideoNFT` is tied to the ID of each project in `RadarEditions`
 
 ## Test scripts
 
