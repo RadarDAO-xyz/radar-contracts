@@ -71,6 +71,7 @@ contract Beliefs is IBeliefs, Editions {
         }
 
         balances[msg.sender] -= amount;
+
         (bool sent,) = msg.sender.call{value: amount}("");
         if (!sent) {
             revert TransactionFailed();

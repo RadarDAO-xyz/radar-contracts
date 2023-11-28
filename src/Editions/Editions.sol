@@ -175,11 +175,12 @@ contract Editions is
             revert EditionNotEnoughBalance();
         }
 
+        editions[editionId].balance -= amount;
+
         (bool sent,) = msg.sender.call{value: amount}("");
         if (!sent) {
             revert TransactionFailed();
         }
-        editions[editionId].balance -= amount;
 
         emit EditionBalanceWithdrawn(editionId, amount, msg.sender);
     }
