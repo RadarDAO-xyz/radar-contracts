@@ -78,6 +78,7 @@ export interface RadarEditionsInterface extends Interface {
       | "getEditions"
       | "getRoleAdmin"
       | "getUserBeliefs"
+      | "getWithdrawableFunds"
       | "grantRole"
       | "hasRole"
       | "initialize"
@@ -210,6 +211,10 @@ export interface RadarEditionsInterface extends Interface {
   encodeFunctionData(
     functionFragment: "getUserBeliefs",
     values: [AddressLike]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "getWithdrawableFunds",
+    values?: undefined
   ): string;
   encodeFunctionData(
     functionFragment: "grantRole",
@@ -387,6 +392,10 @@ export interface RadarEditionsInterface extends Interface {
   ): Result;
   decodeFunctionResult(
     functionFragment: "getUserBeliefs",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "getWithdrawableFunds",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "grantRole", data: BytesLike): Result;
@@ -985,6 +994,8 @@ export interface RadarEditions extends BaseContract {
 
   getUserBeliefs: TypedContractMethod<[user: AddressLike], [boolean[]], "view">;
 
+  getWithdrawableFunds: TypedContractMethod<[], [bigint], "view">;
+
   grantRole: TypedContractMethod<
     [role: BytesLike, account: AddressLike],
     [void],
@@ -1261,6 +1272,9 @@ export interface RadarEditions extends BaseContract {
   getFunction(
     nameOrSignature: "getUserBeliefs"
   ): TypedContractMethod<[user: AddressLike], [boolean[]], "view">;
+  getFunction(
+    nameOrSignature: "getWithdrawableFunds"
+  ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
     nameOrSignature: "grantRole"
   ): TypedContractMethod<

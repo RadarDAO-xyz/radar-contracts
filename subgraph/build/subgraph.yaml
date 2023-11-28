@@ -1,0 +1,81 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: RadarEditions
+    network: optimism
+    source:
+      address: "0xdbed288027cCbE7F6746bB62c989E7C09C7c8059"
+      abi: RadarEditions
+      startBlock: 107895945
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - AdminChanged
+        - ApprovalForAll
+        - BeaconUpgraded
+        - EditionApproved
+        - EditionBalanceWithdrawn
+        - EditionBeliefRemoved
+        - EditionBelieved
+        - EditionCreated
+        - EditionResumed
+        - EditionStopped
+        - Initialized
+        - Paused
+        - RoleAdminChanged
+        - RoleGranted
+        - RoleRevoked
+        - TransferBatch
+        - TransferSingle
+        - URI
+        - Unpaused
+        - Upgraded
+      abis:
+        - name: RadarEditions
+          file: RadarEditions/abis/RadarEditions.json
+      eventHandlers:
+        - event: AdminChanged(address,address)
+          handler: handleAdminChanged
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAll
+        - event: BeaconUpgraded(indexed address)
+          handler: handleBeaconUpgraded
+        - event: EditionApproved(uint256)
+          handler: handleEditionApproved
+        - event: EditionBalanceWithdrawn(uint256,uint256,address)
+          handler: handleEditionBalanceWithdrawn
+        - event: EditionBeliefRemoved(indexed uint256,indexed address)
+          handler: handleEditionBeliefRemoved
+        - event: EditionBelieved(indexed uint256,indexed address,string)
+          handler: handleEditionBelieved
+        - event: EditionCreated(uint256,string,uint256,address)
+          handler: handleEditionCreated
+        - event: EditionResumed(uint256)
+          handler: handleEditionResumed
+        - event: EditionStopped(uint256)
+          handler: handleEditionStopped
+        - event: Initialized(uint8)
+          handler: handleInitialized
+        - event: Paused(address)
+          handler: handlePaused
+        - event: RoleAdminChanged(indexed bytes32,indexed bytes32,indexed bytes32)
+          handler: handleRoleAdminChanged
+        - event: RoleGranted(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleGranted
+        - event: RoleRevoked(indexed bytes32,indexed address,indexed address)
+          handler: handleRoleRevoked
+        - event: TransferBatch(indexed address,indexed address,indexed address,uint256[],uint256[])
+          handler: handleTransferBatch
+        - event: TransferSingle(indexed address,indexed address,indexed address,uint256,uint256)
+          handler: handleTransferSingle
+        - event: URI(string,indexed uint256)
+          handler: handleURI
+        - event: Unpaused(address)
+          handler: handleUnpaused
+        - event: Upgraded(indexed address)
+          handler: handleUpgraded
+      file: RadarEditions/RadarEditions.wasm

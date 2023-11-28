@@ -39,24 +39,31 @@ contract RadarEditions is IRadarEditions, Beliefs {
         if (amount > address(this).balance) {
             revert NotEnoughFunds();
         }
-        uint256 i = 0;
-        uint256 withdrawableAmount = address(this).balance;
-        for (; i < editionCounter; i++) {
-            withdrawableAmount -= editions[i].balance;
-            if (withdrawableAmount < amount) {
-                revert NotEnoughFees();
-            }
+        uint256 withdrawableAmount = getWithdrawableFunds();
+        if (amount > withdrawableAmount) {
+            revert NotEnoughFunds();
         }
-        for (i = 0; i < _believers.length; i++) {
-            withdrawableAmount -= balances[_believers[i]];
-            if (withdrawableAmount < amount) {
-                revert NotEnoughFees();
-            }
-        }
-
-        (bool sent,) = msg.sender.call{value: amount}("");
-        if (!sent) {
+        (bool success,) = msg.sender.call{value: amount}("");
+        if (!success) {
             revert TransactionFailed();
         }
+    }
+
+    function getWithdrawableFunds() public view returns (uint256) {
+        uint256 withdrawableAmount = address(this).balance;
+        uint256 i = 0;
+        for (i = 0; i < editionCounter; i++) {
+            if (editions[i].balance > withdrawableAmount) {
+                return 0;
+            }
+            withdrawableAmount -= editions[i].balance;
+        }
+        for (i = 0; i < _believers.length; i++) {
+            if (balances[_believers[i]] > withdrawableAmount) {
+                return 0;
+            }
+            withdrawableAmount -= balances[_believers[i]];
+        }
+        return withdrawableAmount;
     }
 }
